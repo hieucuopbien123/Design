@@ -1,0 +1,326 @@
+﻿
+Image+Adjustment+Desatorate(CTRL+SHIFT+U)+HistoryBrush=>CTRL+U Y
+
+crop tool với kích thước chỉ định in ấn
+
+C+CORNERPOINTER=>C+STRAIGHTEN 
+RulerTool+STRAIGHTEN+PolygonalLasselTool+ EDIT+FILL=>I->Straighten+L+Shift+F5
+
+Image+CanvasSize=> ALT+CTRL+C C+MOUSEMOTION (+U+ve+chonjcolortrongbangxuathienra)
+
+EDIT+PRe+bicubic EDIT+FREETRANSFORM=>CTRL+T(để áng chừng nhanh)(+SHIFT(méo ảnh))(Enter/DOUBLECLICK(xác nhận)) image->image_size
+
+Z CTRL+K+Tools +CTRL+1  vùngchonchuột (ALT+)MOUSEPOINTER+CLICK => MOUSEPOINTER+SCROLL(CTRL+SPACE+MOUSEMOTION) CTRL+0 H MenuviewTT
+
+CTRL+K+interface/Cursors window view+ruler(CTRL+R) Capslock copylayer movetool(V)  
+CTRL+O Mở bằng cách kéo rê từ mycomputer. Mở Raw file (đuôi.cr2)(chụp từ máy ảnh canon)  export->save for web
+
+ALT+RIGHTCLICKTOOLBAR=> SHIFT+BUTTON
+
+File+Revert CTRL+K+PERFORMANCE=>F12(quay lại lần lưu cuối) 
+
+(khi C):ClickTick/Enter(để đồng ý cắt)  Click Rỗng=>DoubleClick ButtonEscape C Grid Setting bỏDelete+MoveTool VùngChọn->Image+Crop RightClickLayer+DuplicateLayer+New PNG->Image+Trim(ấn delete tự động quay về crop full ảnh)(ratio 0:0 thì chỉnh crop chiều nào cũng đc,front image sẽ về full ảnh)(ALT kéo các chiều)
+
+Layer->Newlayer=>CTRL+SHIFT+N  click chọn layer(GUI layer)SHIFTorCTRL=>linklayer (trên hình)SHIFT->align(smart guide)/distribute align
+Layer+(Un)Group/arrange->reserve=>CTRL(+SHIFT)+N  CTRL+(SHIFT)+[(])(chiều của ngoặc là chiều mà nó đi theo)
+ctrl CLICKopen/close group=>rightclick(khi cùng vị trí) moveTool+Shift(autoselect)(+lock/tắt mắt khi ko chọn)
+CTRL(+SHIFT)+J(nhân bản vùng chọn)=>Layer+duplicatelayer(+New)(nhân bản file mới) CTRL+C+CTRL+V(nhân bản cả vùng chọn cả background)  
+V->ALT+CLICK+MOUSEMOTION(phân biệt với khi đang ở tool M chọn vùng+ấn CTRL sẽ dùng hệt move tool luôn+ALT(duplicate), tuy nhiên nó chỉ duplicate layer chính/di layer tới biểu tượng +, nếu là vùng chọn nhỏ thì vẫn k đc, phải dùng CTRL+J)(chỉ nhân bản đc background nhưng lại nhân bản k tạo layer mới cho vùng chọn)(vùng nhỏ thì vẫn dup đc nhưng k sang layer ms)
+
+CTRL+C->CTRL+V(cùng file)=>CTRL+(SHIFT)+J(phải chọn thì ms có shift cut đc)
+ALT+CLICKEYELAYER(phân biệt với CTRL+CLICK mở đóng group)
+Create/ReleaseClippingMask =>CTRL+ALT+G ALT+CLICK(giua 2 layer)trong bảng layer+Click biểu tượng 4+curve(tạo 1 layer curve)
+pb:image+adjustment+curve(curve ngay trên chính layer) khác 
+flatten image Edit+MergeDown/MergeVisible CTRL+SHIFT+E-> CTRL+E (thêm ALT là dang copy)
+ConvertToSmartObject+RIGHTCLICKLAYER+EDITCONTENT=>DoubleClick+Save(có thể paste từ illustrator)(or copy từ file khác)=>dứt khoát chỉnh TT or chỉnh sang file khác, k chỉnh nửa vời
+RIGHTCLICKLAYER=>Rasterize
+
+Image+Adjustment+hue/saturation=> CTRL+U
+
+CLICK+OPTION=>Khi chưa có vùng chọn: M+SHIFT(square or circle) M+ALT(draw from center point)=> kết hợp đc
+Khi đã có vùng chọn: M+SHIFT(vẽ thêm) M+ALT(vẽ xóa) M+SHIFT+ALT(vẽ lấy giao) khi vẽ hình tròn có anti-alias
+style+fixed ratio/size
+
+LassoTool=> L(dùng polygonalTool)+ALT(chuyển qua lại)+CLICK/MOUSEMOTIONCLICK(vẽ k hết=>shift)(chỉ nên dùng polygonal, khi nào muốn vẽ ms ấn alt)
+Magnetic lasso tool+click(đặt nốt vào cạnh)(+doubleclick(tự nối))(+click nốt đầu(kết thúc))(width độ rộng,constrast cố định,frequency:tốc độ ra node)
+=>chú ý khi sửa chỉ nên dùng polygonal(nếu dùng cả mà là xóa thì chú ý alt lần 1+click là chọn xóa+ giữ alt lần 2 là chọn lasso=>chỉ nên dùng 1 tránh nhầm)
+=> kinh nghiệm tránh sai: nói lên là thêm hay xóa để dùng phím tương ứng, xog ta chỉ dùng chuột để vẽ và chỉ kick đúp(k ấn nút j hết là k sai)
+Chỉ dùng poly hoặc lasso. ĐB là cần xóa triệt để các phần thừa ra background, nên xóa lui vào trong hơn thì paste ảnh chỗ khác sẽ k lộ, có thể thêm feather 5px tránh lộ
+Chuyển sang free transform+RIGHTCLICKPICTURE->FlipVertical/Horizontal
+
+PolygonalTool+SHIFT(45,90 độ tròn)
+
+MagicWandTool=>W(+SHIFT)(+Chinh tolerance)(Tick Contiguous) Seclect+Inverse=>SHIIFT+CTRL+I =>Khi sửa tiếp bằng lasso tool thì bị ngc lại alt là thêm,shift là trừ
+QuickSelectionTool=>W (+SampleAllLayer)(+ALT)(+chỉnh nét bút)
+ObjectSelectionTool=>W(+SHIFT/ALT)(+mode:lasso/rectangular)(auto-enhance cố định)
+Selection+ColorRange+EyeDropperTool=>SHIFT(chọn thêm màu) (chỉnh fuzziness)(+Select) 
+Slect+EditQuickSmartMode=>CLICKTOOLBAR/Q  chọn bằng B->màu trắng là chọn,màu khác là xóa->ALT+CLICKTOOLBAR/Q=>chỉ nên dùng Q,k dùng ALT+Q(chỉ dùng ALT+Q+Tô đỏ vào cùng cần chọn)
+
+Khi chưa có vùng chọn: M+SHIFT(square or circle) M+ALT(draw from center point)=> kết hợp đc
+Khi đã có vùng chọn: M+SHIFT(vẽ thêm) M+ALT(vẽ xóa) M+SHIFT+ALT(vẽ lấy giao)
+feather(phải chỉnh từ trc) Select+Modift+Feather=>SHIFT+F6
+(Xóa 1 phần trên layer):M+Draw+DELETEBUTTON
+Hiden/ShowLayer=>CTRL+,
+
+(Tô màu tốc độ)=>U/M+ALT/CTRL+DELETE
+
+Selection+SelectAndMask...=>CTRL+ALT+R View Transperency(+invert) (chỉnh trc)ShiftEdge(chỉnh cho viền background mất) (chỉnh sau)RefineEdgeBrushTool(bỏ background (chỉnh đc cả tóc)) (chỉnh cuối)smooth+contrast output (+EdgeDetection tự động chỉnh)
+(ấn vào quay lại sẽ quay lại từ đầu, chỉnh smooth cho mượt thì thêm cả contrasrt cho cạnh nó sắc,chỉnh cả trên nền đen và trắng,sau)RefineEdgeBrushTool thì chỉ nên quét qua 1 lần dứt khoát luôn là đẹp
+Selection+FocusArea=>In-FocusArea view  2 cái bút thêm bớt
+(Khi cắt ảnh thì nên refine edge Selection+SelectAndMask..)
+(Refine edge có thể làm thủ công với layermask+brushTool,ta k cắt ảnh sẽ hay hơn)
+
+Ctrl+T+CORNERPOINTER(xoay ảnh tùy ý)=R
+layer(nút nhỏ)+Panel options
+
+MenuSlect=>CTRL+A ALT+CTRL+A SHIFT+CTRL+I  Modify(dùng vs mọi kiểu chọn vs tính năng vượt trội border,smooth,expand,contract) Grow=tollerance(magic wandTool) similar=kiểu bỏ contiguous(dùng vs mọi tool luôn)
+TransformSelection(chỉnh kích thước fix từ đỉnh)=> CTRL(3cố định,chỉnh1) ALT(tâm cố định) SHIFT(đỉnh đối cố định)->có thể chỉnh cả từ trung điểm cạnh,xoay từ corner=>kết hợp lại ra rất nhiều kiểu đổi vị trí cố định(cả 3->chỉnh đối xứng2đth)
+Select->SaveSelection+Name->Select+LoadSelection+Operation/Channel+CTRL+LEFTCLICK  IfTranparency=>CTRL+LEFTCLICkLayer(phải click trúng bức ảnh ms đc chứ k phải click vô tên)
+Subject(dung khi k có vùng chọn nào hết, hay hơn cả object selection tool khi có 1 object)
+
+PenTool=>P (+ALT chỉnh hướng ngay khi vẽ xong chứ k cần click lại)(+RIGHTCLICK+Delete Anchor Point khi xóa đ cũ/deletePath=>xóa cả đg) (đang vẽ đường cong mà muốn vẽ thẳng thì dùng ALT kick lại điểm vẽ trc cx đc)
+Kinh n0 dùngP:cứ vẽ theo ý muốn r chỉnh ALT, chú ý chỉnh ALT thì cái hướng nó của nút nó phải là ngay sát cái hướng sau đó chứ k phải hướng đích. Chú ý càng dài càng cong và càng nghiêng phía nào thì càng cong phía ngc lại)(chọn sâu vào k cần refine edge nx)
+(mẹo, Thay vì cứ phải ALT liên tục để đổi hướng, ta chấm 1 điểm ngay bên cạnh như k vẽ j r tùy chọn hướng khác hay vẽ tiếp 1 đth cx đc)
+RIGHTCLICKPATH+MakeSelection=>CTRL+ENTER DoubleClickPathTable/PathMenu(smallbutton trên bảng)+SavePath->SaceDocument/Delete Path(or clickDeleteButton) +lưu ảnh nx thì path lưu kèm ảnh
+(để mở: CtrlClick path trong pathtable=>chọn vùng/singleClick path trong path table: chọn lại path của pen tool) 
+
+(k nên xóa trên photoshop vì k khôi phục đc)
+XBUTTON(Đổi vị trí màu)/Click
+LayerMask:Layer+LayerMask+HideAll/RevealAll=>(ALT+)CLICKICON3 (Chọn từ trc,phần chọn là phần ta muốn giữ)Layer+LayerMask+RevealSelection=>ClickICON3 ALT+RIGHTCLICKLayerMask(Hiển thị)
+Gradient=>G+Mode+Normal (+Gradient Editor-> chọn kiểu) +DoubleClick vào thanh màu+Import/Export
+(Chỉnh màu vs layer mask dùng colorrange là hợp lí)(Chỉnh hiệu ứng màu):(trên bảng layer) HardLight  Properties Table+Masks+ColorRange(Chọn mask từ trc)/MaskEdge(tùy công cụ chọn)=>DOUBLECLICKMask(nên chuyển đen trắng r chỉnh vùng chọn)
+(chọn Mask)Properties Table+Invert/Image+Adjustment+Invert=>CTRL+I  +Density(chỉnh GT hiệu ứng của mask)
+(kinh n0:dùng gradient ngay từ đầu vs layer mask điểm đầu là màu đen r chỉnh lại bằng tool chọn,sau cho hai phần giao nhau nhìn như thật đầu tiên r ms chỉnh đến các object)
+
+Dùng BrushTool pb 2 GT: Opaccity là độ mờ, còn hardness là độ đậm(kiểu facde) ở viền=> tạo hiệu ứng fade(opacity20%,hardness=0(=0nhung k biến mất nhé,viền nó fade mạnh thôi còn opac=0 ms mất))=> gradient
+
+AdjustmentTable=>CLICKICON4LAYERTABLE/Image+Adjustment(TT) (chỉnh màu ở 1 đối tượng bất kì=>dùng mask tô màu or chỉnh màu ở 1 layer=>dùng layer clipping mask)(1.chỉnh sắc độ,2.chỉnh màu,3.hiệu ứng)
+
+Image+Adjustment+Levels=>CTRL+L  ((Reset)ALT+)CANCEL
+(cách chỉnh màu cân bằng vs mọi ảnh:chỉnh từng kênh màu đưa 2 nút đến phần màu đầu tiên,output vs mid thì thôi, output tạo độ bóng sáng=> cân bằng vs các bức ảnh nghiêng quá về 1 màu)
+HistogramTable+Nút nhỏ trên phải+View
+(khi muốn ảnh mang tông màu nào thì dùng level kéo thanh màu của nó lên, và kéo thanh màu đối của tông màu hiện tại lên,tạo kk cho bức ảnh ấm áp, cổ xưa,hay nhẹ nhàng như ta muốn)
+
+Image+Adjustment+Curves=>CTRL+M(AmountofLight=>phù hợp up web)(+CLICK vô ảnh)(+Bàn tay drag)(nút sáng, tối giống level)(có thể tạo vùng chọn r chỉnh=>dùng layeradjustment bôi đen+brushtool)
+(curve chỉnh đc từng vùng hơn level,chỉnh từng vùng với từng kênh luôn)
+(Lưu ý khi chỉnh curve nên chỉ đặt 3 điểm midtone, chỉnh 1 điểm là vùng tối, 1 là vùng sáng)(1 điểm thì sẽ chỉnh cả ảnh)
+(Thật ra khi chỉnh 1 vùng thì ta chỉ nên kéo ít thôi vì phần nào nó cx chỉnh đồ thị liền kề theo hướng ngược lại làm tăng độ tương phản sáng tối.Hơn nx, đôi khi nó sẽ chỉnh sáng tối k theo ý ta do nó thêm màu vào k thực sự làm sáng lên ví dụ chỉnh ngược: sáng thành tối, tối thành sáng, chỉnh quá đà sẽ tạo màu k mong muốn)
+
+(Blending Mode): BrushTool,...+Mode=>Layer(cạnh opacity)(=>Blending mode chỉ HĐ khi có hiện tượng đè layer thì ta chỉnh cho layer bên trên sẽ tác động xuống layer dưới, vẫn HĐ đc vs clipping mask vì nó cx là đè bên trong)
+(ta chỉnh opacity cx là chỉnh mức độ tác động của layer bên trên vs layer bên dưới=> opacity max sẽ có tác động lớn nhất=> nếu như ta dùng blending mode để chỉnh sáng 1 layer, ta duplicate layer đó vs opacity là 100%, nhưng ta thấy vẫn thiếu sáng, ta lại duplicate tiếp cx đc, sau đó chỉnh opacity để cân bằng)
+(screen,multiply,softlight là 3 cái luôn ở mức độ chuẩn, lên trên nhẹ hơn, dưới mạnh hơn)
+(6 nhóm:normal,darken(xóa màu trắng,lấy màu tối),lighten(xóa màu đen,lấy màu sáng),contrast(tăng cả sáng, tối,bỏ màu ghi=>tăng tương phản(rực rỡ hơn,màu tươi hơn)=>>3 cái này dùng loại bỏ background trắng,đen,ghi(tùy màu dùng mạnh hay yếu mà bỏ màu khi có sự tương phản màu sắc(VD ánh đèn nền tối)),effect,color)
+(Do ta thg dùng contrast làm tăng độ tương phản nên các vùng tối thg thành màu đen hết dù mong muốn=> thg dùng layermask với feather+ColorRange(shadow) để bỏ đi phần màu đen(+CTRL+I))(feather sẽ khiến vùng chọn trong layer mask có sự chuyển tiếp mượt mà, màu đổi mượt mà chứ k đen trắng rõ ràng luôn)
+(Thú vị: khi dùng bỏ background, nếu giữ màu nào + để trên nền màu đó thì sẽ khó phát hiện ra hơn, nếu background tương phản vs object như v thậm chí giup ta bỏ background mà vẫn giữ các chi tiết phức tạp như tóc chuẩn hơn cả refine edge)(k dùng đc ví dụ tóc trắng chụp nền trắng thì chịu)
+(PP xóa background của chi tiết phức tạp trên nền màu tương phản hiệu quả nhất:chọn phần hình ảnh+copylayer+chỉnh layer dưới mất background=blendingmode+level(chỉnh sao cho mất màu tương phản)+layer trên dùng layermask xóa đi phần chi tiết phức tạp=>PP này để cả các pixel cực nhỏ luôn)
+(kinh n0: chỉnh hardness=0(cho nó mờ chuyển tiếp từ tóc sang ng chẳng hạn, k bị lộ,vs hardness ta chỉ =0 or =100 là hợp lí giữa làm gì chứ), opac cx giảm tầm 70,tô lần 1 quét qua hết(đc phép quét sâu vào 1 chút vì opac thấp), các lần sau cần chuẩn để loại bỏ hoàn toàn background, k tô vào chi tiết khác,chỉnh tiếp vs X)
+(VD khi dùng darken=> để chỉnh bết, ta dùng layer mask nhưng ta vẫn giữ darken để color range nó chuẩn)
+
+rê layer vào thùng rac=>chọn layer+DELETEEBUTTON
+
+Adjustment+Threshold=> ta luôn dùng vs layermask vì ngoài vc k chỉnh ảnh, nó còn cho ta dùng các tool khác nx, dùng trong image toang chả lm đc j + Color Sample Tool(đánh dấu điểm)=>I+RIGHTCLICK+DELETE CTRL+L+Setblack,white,gray point
+
+Image+Adjustment+Brightness/Contrast(+use Legacy=reset)(+auto(thg dùng để chỉnh nhanh))+(chỉnh thanh contrast kéo tức là chỉnh cả black và whitepoint r,chỉnh brightness là sáng tối k bị tối kịt đi như các công cụ khác, chỉnh rất vừa=> ưu tiên dùng nó khi cần chỉnh ánh sáng(hơn là lightness trong hue/saturation))
+
+PP loại bỏ fence: NewEmptyLayer+B+Vẽ lên vùng cần bỏ ở layer trống đè lên(+SHIFT vẽ nhanh)+ấn layer trống, chọn layer cũ+EDIT+FILL(content-aware)/Content Aware Fill
+
+(Saturation(>vibrance): thêm bớt màu ghi,tăng cao quá sẽ vỡ màu,vibrance k bị vỡ màu là công cụ mới nên dùng hơn là saturation)
+
+(chỉnh màu tùy ý 1 vùng nào đó trên ảnh)Adjustment->Hue/Saturaition=>CTRL+U (+preset dùng nhanh có sẵn) Master:=>Hand<->+CLICKONPICTURE+EYEDROPPERTOOL(+SHIFT)+Hand<->+chỉnh Hue/saturation=>CTRL+MOUSEMOTIONLEFTRIGHT+(LayerMask+BruhTool+Hardness bỏ vùng k cần đổi màu)  (+chỉnh lightness) (+colorize: ảnh một màu) 
+(kinh n0: có những lúc cả cái bảng hue nó k đc màu như ý=>Đừng quên chỉnh thêm cả lightness và saturation sau khi chỉnh hue)
+(Pb:opacity trong layer sẽ tác động lên ảnh or lên mask làm giảm or tăng tác động của mask theo kiểu là làm mờ cái layer đó đi(giảm tác động vùng trắng),còn density trong bảng property của mask thì nó làm vùng tối trở thành xám kiểu thay đổi tác động cho các vùng đen,khi dùng brushtool ta lại có opacity của riêng cái tool đó nx)
+
+(Như v,ta có thể dùng hue/saturation để chỉnh 1 vùng bất kì thành bất cứ màu nào ta muốn,nếu chỉnh ez 1 màu thì dùng bàn tay vs eyedropper là ok, nếu muốn vùng cụ thể hơn thì dùng layermask chọn vùng)(Vc dùng thêm saturation giúp ta tăng giảm độ mạnh của 1 màu tươi hơn or xỉn hơn)=>chỉnh màu tùy ý,làm tươi làm xỉn,sáng tối tùy ý
+(Còn ColorBalance thì lại k có saturation,khi tăng giảm 1 màu thì 1 màu đối nó sẽ đc giảm,tăng do đó nó k tùy ý đc.Mà thg dùng vào vc làm tươi màu hơn ở mọi vùng do ta chỉnh shadow vs 1 màu và light or midtone vs 1 màu đối, bức ảnh sẽ tươi như trong tranh vẽ(làm mất sắc thái màu hiện tại, biến bức tranh về trung tính)
+=>khắc phục hiện tượng ám sắc, tức là bức tranh bị ngập trong 1 tone nào đó, ta dùng midtone để fix lại,chỉnh nhẹ nhàng thôi. Nó còn giúp làm tranh màu rõ ràng hơn(tươi) do ta chỉnh shadow và light đối màu,ví dụ làm bầu trời xanh hơn, lá cây xanh hơn núi đỏ hơn chứ k kiểu bết bết mà nhìn k gây cảm giác khó chịu chỉnh ít kẻo bết)
+(Kinh nghiệm: vùng tối có màu nào thì tăng màu đó lên, vùng sáng tăng màu đối của nó thì bức tranh về cân bằng màu,dùng midtone nếu muốn bức tranh ngập trong 1 sắc nào đó)
+(Mặc dù k giảm màu đc như level vì giảm màu sẽ tăng màu khác lên do k có saturation, nhưng ta có thể tăng màu lên như level thông qua layermask+B+có thể chỉnh độ mạnh bằng opacity layer or kéo thanh trượt màu tùy ý)(dùng layermask thì những màu đối chỗ khác ms k ảnh hưởng)
+ColorBalance=>CTRL+B (chỉnh color balance và tone balance)(chỉnh màu tươi hơn 1 cách nhanh hơn vs toàn ảnh là dùng hue nhưng chậm hơn nếu muốn giới hạn vùng)
+(Vs tranh k bị ám sắc, chỉnh color balance sẽ làm màu hiện rõ rệt, chỉnh mạnh sẽ tăng độ tương phản)
+
+Adjustment->SelectiveColor(color,giống color balance nhưng chỉnh 1 màu bất kì nên giống trộn thêm màu và trộn yếu hơn)=>dùng cho bức ảnh có sự phân biệt khá rõ về màu
+
+(Chủ động gây ra ám sắc 1 tone đơn sắc, k dùng mấy cái auto trong image)Adjustment+PhotoFilter(+Density)+Preserve luminosity=>LayerMask+SolidColor+BlendingMode->color(đây là chế độ làm thành 1 tấm kính mờ)+OpacityLayer(+DOUBLECLICK)
+
+Adjustment+ChannelMixer(công cụ chỉnh mạnh nhất do can thiệp 3 kênh màu gốc)  có thể trộn kênh=>Chọn kênh+CTRL A,C+Chọn kênh+CTRL V(trộn kênh thà dùng hue)
+(ta thg chỉnh phong cách cho nó 1 tí thôi, mà chỉnh bằng hue+saturation cx đc)
+
+(Tạo ảnh đen trắng: threshold,trộn 3 channel vào channelRGB,mode->grayscale(chuyển k gian màu gray),hue/saturation->kéo saturation về min,adjustment+desaturate=>adjustment+gradient map)
+(GradientMap+GradientEditor+preset+chỉnh 2 điểm black,white point bên dưới để điều chỉnh mức độ màu đen trắng.)(chọn nút+chọn màu sẽ đổi màu nút tùy ý)
+(cách đặt điểm ở giữa: chọn 1 điểm bất kì để lấy màu điểm đó và chèn vào thanh sẽ thêm màu đó nx vào trong bức hình tuân thủ theo preset)(thêm màu trắng vào giữa hai màu đen cx đc)
+(thanh màu về bên trái là màu đậm, phải là nhạt, giữa là midtone, nếu black trùng white point thì ảnh chỉ còn 2 màu đen trắng, mất màu xám thì giống hệt threshold)
+(GradientMap+chọn preset nhiều màu khác+đổi màu đậm là vùng đậm,nhạt là vùng nhạt(nếu k sẽ thành âm bản)+kết hợp với blendingmode+opacity sẽ tạo ra 1 dải màu gradient mới cho ảnh=>gradient map làm ảnh mang 1 dải màu khác(>hue)=>kết hợp blending mode này thì gradient map và channel mix là 2 PP mạnh nhất tạo sắc thái cho bức tranh đẹp)
+
+(Tuy nhiên chỉnh đen trắng mạnh nhất là Adjustment+blackanswhite)=>CTRL+ALT+SHIFT+B(kết hợp layermask nếu chỉnh từng vùng)(+preset)+kéo thanh trượt(+Click+MOUSEMOTION trên màn hình)
+
+(Mặc dù layermask giúp ra chỉnh 1 vùng cụ thể tuy nhiên lại k nên dùng vì ta rất mất tg cho vc chọn vùng và chỉnh sửa 1 cách thủ công=> khó lắm ms dùng layermask)
+(các cách chỉnh sáng tối: level=>cân bằng sáng;curves=> chỉnh đc sáng tối nhưng phần nào có ảnh hưởng vùng và k theo ý muốn nếu chỉnh ngược;lightness thì phủ lên bức màn;brightness thì cx ok khi kết hợp với colorrange+Shadow tuy nhiên sẽ cần dùng đến 2 layermask mà có thể sáng k như ý muốn do sự kết hợp 2 layer k đc mượt mà
+và nếu bên trong vùng tối lại có 1 vùng tối hơn, thì tăng độ sáng lên nó k hiểu là vùng tối hơn cần nhiều sáng hơn làm ta phải thêm layermask nx)
+=>Adjustment->Shadow/Highlights chuyên cho chỉnh sáng tối(k dùng đc layermask vì chỉnh cả vùng sáng vùng tối 1 ảnh và k giới hạn đc)(+show more options)(+AmountBar:chỉnh mức độ,tone:chỉnh đậm nhạt của màu vùng đó,radius:giới hạn chỉnh của vùng sáng/tối,cẩn thận chú ý sự chuyển tiếp 2 vùng sáng tối phải hợp lí)
+/Fiter->CameraRawFilter->nó tự cảnh báo vùng cháy sáng(tắt bằng nút nhỏ bên phải trên)+chỉnh các thanh black,white,highlight,shadow
+
+(nếu ảnh k có nhiều màu trùng vs 1 vùng thì ta cx có thể kéo nhẹ thanh màu vùng đó thì cx chỉ chỉnh vùng đó mà các vùng khác k đổi nhiều thông qua shadow or highlight)=>chỉnh color match cho 2 ảnh mang 2 sắc thai khác nhau khi ghép lại
+=>Adjustment+MatchColor(ép cùng tone)+Source(sang ảnh khác cx đc)+layer(ví dụ khi ghép 2 ảnh)+fade+colorIntensity+luminosity(kinh n0: chỉnh tùy theo phong cảnh, nếu là tông xanh kiểu trời mây thì thg màu sẽ mất nên ta tăng colorintensity,...)
+
+Filter+ConvertToSmartFilter(smartObject)(+Filter+Blur.../surfaceBlur+radius(bán kính làm mờ),threshold(làm mờ bề mặt,khi dùng sẽ tự động loại bỏ nhiễu 1 chút))
++Noise+ReduceNoise->tăng strength(mức độ),giảm preserve detail(bảo toàn các chi tiết nếu k muốn nó nhòe hết),tăng reducecolornoise(màu đậm quá có thể gây ra noise),giảm sharpendetail(các vùng chuyển tiếp sẽ nhòe và hết nhiễu)
+(Do muốn loại bỏ nhiễu thì buộc phải làm nhòe, ta cứ loại bỏ nhiễu max sau đó chỉnh độ nhòe sao cho vừa đủ để k mất các chi tiết cần có là đc)
+Filter+CameraRawFilter->Detail+NoiseReduction+chỉnh lên các giá trị (trừ luminance contrast sẽ khử noise là PP hiệu quả nhất)(ảnh cr2 sửa sẽ tốt hơn)
+
+BrushTool=>B +BrushTable +BlendingModeOfBrushTool(chỉ có ảnh hưởng khi màu đè lên màu(k có tác dụng với màu trắng)=>đè màu nhưng k trộn màu nên color dùng tạo hiệu ưng sơn 1 màu khác=>BlendingModeOfBrushTool=BlendingModeLayer+đổ màu) +(opacity=>trộn màu)+flow(hiệu ứng) (+hiệu ứng súng xit)(+Symmetry vẽ đối xứng)
+
+B+F5=>ClickBrushTable (+chỉnh Flip,Spacing,Roundness,Angle->đổi spacing cao nhìn cho rõ)(+chọn 4 loại thư mục cọ vẽ->chọn bút tròn và đổi góc nghiêng làm bút lông thanh đậm)
+(+ShapeDynamics:SizeJitter,Fade%,AngleJitter,RoundnessJitter=>tác dụng chỉnh ngẫu nhiên các thứ đó(kết hợp fade vs sizejitter vẽ giọt nc))(+Scattering:Scatter+BothAxes,count)
+(+DualBrush:kết hợp cái bút hiện tại vs 1 bút khác ta chọn, tự động tương thích)\\
+(+ColorDynamics:ApplyPerTip+Foreground/BackgroundJitter(vẫn phải click)+huejitter(chỉnh độ mở rộng của 1 MÀU trên dải hue, tạo 7 sắc luôn->chọn màu)+StaurationJitter+BrightnessJitter)
+(+Transfer:opacityjitter+FlowJitter->mờ đậm ngẫu nhiên)
+(+WetEdges:mờ đi 1 chút)
+
+ChosenArea+Edit+DefineBrushPreset(=>nó tạo thành ảnh 2 màu)+F5(+kéo xuống cuối cùng +chọn+kết hợp các cái tùy chọn với Brush)
+B+RIGHTCLICK/F5+click nút nhỏ trên phải mở bảng setting+Import/Export(có thể tải thêm hàng loạt ở trên mạng+Export)
+
+MixerBrushTool->B(chọn đúng loại bút có hình nhỏ bên trên phải)+NewLayer trống+ ALT+CLICK(để đổi màu)(+đổi Mode)(+wet)(kết hợp các điều chỉnh bth đc)
+(kinh nghiệm: phù hợp vs các bức ảnh k có quá nh chi tiết nhỏ, tô phải tô kín, nên tổ kiểu bức tranh mờ nhưng có 1 chỗ nào đó phức tạp là tiêu điểm của bức tranh thì vẽ nó rõ tí, chỉ cần vẽ sao cho chỗ chuyển tiếp giữa các màu nhìn giống kiểu bút sơn dầu,các chỗ phức tạp vẽ rõ tí, chỉnh kích thc bút nhỏ cho chỗ vẽ càng phức tạp)
+
+EDIT->ContentAwareFill/EDIT+FILL=>F5(chỉ cần dùng lassoTool để chọn cx đc)(+chọn và làm nh lần để mất hoàn toàn) ContentAwareMoveTool=>J(chỉ nên move trên nền tối đồng màu vì khó hơn fill)
+
+(Xóa 1 vùng hình ảnh và thế vào đó 1 vùng khác thủ công)Chọn+Feather+V+ALT+MOVEMOUSE/CloneStamp=>S +ALT+RIGHTCLICK (+blendingmode)+opacity+sample(all layer)
++CLONESOURCE Table(+ShowOverlay) (+tạo nhiều mẫu=>k cần dùng)(mỗi lần lấy mẫu chỉ tô 1 chỗ nên ta lấy mẫu liên tục vùng xq)(+chỉnh W,H,xoay)
+
+HealingBrushTool=>J +ALT+RIGHTCLICK(lấy chất liệu liên tục và k cần quan tâm đến sáng tối=>tẩy mun,bẩn nhỏ.Nếu thay thế ví dụ đg giao nhau hay nhiều màu thì clone stamp tốt hơn)
+(kinh n0: chỉnh chi tiết tỉ mỉ thì click thôi, chỉnh chi tiết lớn ms rê chuột.clone copy ảnh,healing copy chất liệu, độ sần sùi)+sample(all layer)
+SpotHealingBrushTool=>J(+type:contentaware)+SampleAllLayer+newLayer+dùng trên layer trống
+PatchTool=>J+Chọn+MOUSEMOTION(PatchTool khi fix 1 vị trí giống như content aware nhưng là content aware thủ công, ta chọn vị trí cho nó fill,khi chọn thì nó k quan tâm sáng tối)
+
+(Tổng kết:contentawarefill tự động chỉnh sửa nhờ pixel xq,clonestamp:copy vị trí nào vào vị trí nào,healingbrushtool:lấy chất liệu xung quanh,spothealingbrushtool:contentaware kết hợp lấy
+chất liệu xq tự động(chỉ nên dùng trị mụn,nếu k như ý và muốn thủ công thì dùng healingbrushtool),patchtool:kết hợp contentaware+tự chọn chất liệu ta muốn)
+
+DodgeTool//BurnTool=>O +chỉnh Exposure (chỉnh range) (dùng khi cần chỉnh nhanh mà k có nhu cầu giữ lại gốc)
+SpongeTool=>O +chỉnh flow +mode
+
+BlurTool=>O +chỉnh strength (+chỉnh mode ưu tiên vùng có...=>k cần dùng)
+SharpenTool=>O +chỉnh strength (+mode->k cần)
+SmudgeTool=>O +chỉnh strength (có thể chỉnh mịn da nhưng đã lỗi thời)
+
+(Kỹ thuật chỉnh mắt: LayerAdjustment+Curve+Hue/Saturation+CTRL+I+BrushTool)(=>Cx dùng chỉnh trắng răng hay tô màu cho mí mắt, do đơn sắc nên dùng color balance hơn)
+(Kỹ thuật làm trắng răng: (ví dụ TH răng vàng)layeradjustment+(bắt buộc là)Hue/Saturation->chọn màu vàng trên ảnh->giảm saturation về 0->BrushTool)(vì k tự tô đc màu trắng vô)
+(Kỹ thuật chỉnh da(bao gồm tẩy mụn+làm mịn,tái tạo chất liệu)(cx dùng cho các loại bề mặt khác):1.NewLayer+CloneStamp/HealingBrush(SpotHealingBrush nếu nó đc như ý)+Sample->AllLayer(lấy mẫu từ tất cả các layer hiển thị nhìn thấy hiện tại);
+2.DuplicateLayer(nếu các layer trc có chỉnh j thì gộp chúng lại và thao tác trên layer gộp)+Filter->Blur->SurfaceBlur(+LayerMask+CTRL+I+BrushTool+opacity)(có thể dùng làm mượt tóc)=>Filter+CameraRawFilter+Clarity(làm ảnh sắc net or mượt);3.duplicate layer gốc ban đầu chứa chuẩn chất liệu nhất->Filter->Other->HighPass(0,5)+layerBlendingMode->LinearLight(có thể chỉnh level vs layer đó tăng độ tương phản từ từ sẽ khiến chất liệu rõ hơn)+opacity)
+(Khi chỉnh da, ta làm mịn(nếu quá nhiều mụn thì vc làm mịn trc này sẽ khiến vc xóa ez hơn),r xóa mụn,r làm mịn tiếp,r tái tạo chất liệu)
+(duplciate+dùng thêm opacity là bắt buộc r vì k muốn chỉnh trực tiếp mà lại k thể dùng vs layer k có j khi làm mịn da)
+(quy trình: làm mịn->xóa mụn-> làm mịn->làm sắc nét với clarify->tái tạo chất liệu)
+(chỉnh tóc tương tự làm mượt bằng reduce noise or surface blur+nhuộm màu 1 nhánh tóc hay cả mái tóc vs layeradjustment)
+
+(kỹ thuật chỉnh body: Duplicatelayer+Filter->Liquify=>ALT+CTRL+F chỉnh opacity (+chỉnh size,pressure)+WrapTool(VD:chỉnh eo,giảm khuôn mặt góc cạnh)+BloatTool(vd:chỉnh ngực=>chỉnh đều cả ngực)+PuckerTool(vd:chỉnh mũi,mắt bé lại)+ReconstructTool)(chú ý cả background đằng sau body phải đảm bảo k bị méo)
+(Kỹ thuật kéo dài bộ phận cơ thể(VD:cổ,chân):CTRL+J+chọn từ cổ lên(chọn từ các bộ phận sẽ cao lên,khéo léo sao cho vào áo hay j khác ít hết mức có thể)+NewLayer+CTRL+J(ảnh cổ sang layer mới)+LayerMask+di chuyển ảnh cổ lên trên 1 chút+Phối hợp BrushTool đen trắng+CloneStamp+(+tưởng tượng ra phần này sẽ thêm ntn, ví dụ tốc sẽ trải xuống che hết phần đó rồi dùng 2 công cụ kia để sửa)+đổi layer ảnh gốc copy và ảnh cổ liên tục nếu k tô đc vì nó chỉ ở 2 layer đó)(kinh n0: phần nào k chế ra chi tiết đc nhìn thô thì lấy tóc che đi+Chọn 2 layer+CTRL+E)
+
+(công cụ khác thay thế liquify:chọn vùng+CTRL+T+RIGHTCLICK+Wrap+LayerMask+BrushTool(+Chỉnh opac và hardness fix vùng lộ màu)=> khó =>Vùng chọn+Edit+PuppetWrap+đính các điểm cố định)
+Edit+PuppetWrap (+ShowMesh) (+ta thg chọn copy 1 đối tương vào 1 layer trống r cho đè lên 1 bức ảnh nào đó, ta cx có thể tách đối tượng đó ra sang layer mới r fillcontentaware chỗ đối tượng đó->dùng puppetwrap cho cả layer đối tượng kia=>làm nv thì ta tha hồ chỉnh bóp méo đối tượng thoải mái.Nếu ta chọn vùng r chỉnh co vào sẽ lộ nền transparency, lại fill chỗ đó)
+(đặt pin vào các điểm k dịch chuyển(VD: dùng uốn cây cảnh, dáng người,hướng của tóc,...)=>dùng nắn bóp bất cứ thứ j nhưng chỉ nên dùng khi bóc tách dối tượng ra nền transparency)
+
+(Để chỉnh kích thước ảnh theo kiểu bóp méo 1 chiều có 3 cách:Image+ImageSize+bỏ dấu nối(chỉ đc cả ảnh)/Chọn vùng+CTRL+T+RIGHTCLICK+Distort=>CTRL+T+SHIFT+Chỉnh ảnh)
+(Công cụ kéo ảnh mạnh mẽ nhất, kéo ảnh rộng kích thước mà bảo toàn cái cũ)=>Chọn vùng k muốn dãn(k cần chọn sát quá)(k chọn vùng rời rạc)+Select+SaveSelection+Edit+ContentAwareScale=>dùng crop tool mở rộng k gian làm vc ra khoảng đủ mong muôn(cũng ALT+Ratio0:0 để kéo 2 chiều)->CTRL+ALT+SHIFT+C+Protect+chọn vùng+kéo ảnh(+ALT:kéo đối xứng)+SHIFT(kéo 1 chiều)+Enter(chỉ nên dùng vs ảnh bảo toàn 1 cụm k rời rạc)
+
+(Khắc phục lỗi ống kính sai góc)C+Mở rộng  ko gian làm vc sang 2 bên 1 chút(+ALT mở rộng đối xứng)+Filter+AdaptiveWideAngle=>CTRL+ALT+SHIFT+A(chỉnh size,focallength(tiêu cự kính))(+preview)+constraintTool(kinh n0: nếu có kẻ ô thì chỉ cần chỉnh 1 chiều của ô thôi)+Kéo đth+chỉnh đth về VT cong(khi làm thẳng 1 lần thì lần sau CT sẽ tự nhận diện và ta k phải kéo nx) +RIGHTCLICK đường thẳng+Horizontal/Vertical(dóng đường đó làm ox or oy)(+ALT+CLICK đth để loại bỏ=>CTRL+Z)+OK
+(kết hợp)Filter+LensCorrection=>SHIFT+CTRL+R (+RemoveDistortionTool+click 2 điểm+chỉnh=>dùng trong custom hơn) (+straightTool:xoay thẳng hình nghiêng)(AutoCorrection: tự động chỉnh ảnh theo thông tin về loại máy và tiêu cự bên dưới=>tốt nhất là tự chỉnh)=>custom (+RemoveDistortion như trên) (+chỉnh vignette+amount:xủ lí tối góc) +Horozontal/Vertical Perspective(chỉnh ảnh hết méo nhưng phải chỉnh 2 lần vì mỗi lần chỉ đc 1 bên)
+
+Filter->VanishingPoint=>ALT+CTRL+V +CreatePlaneTool +pick 4 điểm góc 1 phối cảnh (+chọn phối cảnh+backSpace: xóa phối cảnh cũ)(+ctrl:điểm giữa thì thêm 1 phối cảnh nx) +chỉnh TT vị trí các điểm phối cảnh (+ALT+Chỉnh điểm giữa phối cảnh sẽ di được hướng) +marqueeTool+chọn vùng trong phối cảnh +ALT+Move vùng chọn đến vị trí mới(+Healing->On)(làm nhiều lần với chỗ lộ để che hết)
+(kinh n0: phải chắc chắn phối cảnh chỉnh đến đâu chuẩn đến đấy, vì nếu tạo 1 phối cảnh mới từ điểm giữa của phối cảnh cũ thì cái phối cảnh cũ sẽ k thể chỉnh các điểm đc nx trong nhiều TH) 
+(kinh n0:mặc dù dùng healing thì nó sẽ ổn về màu nhưng mà nếu ta copy 1 khu vực xa sang một khu vực gần thì sẽ dễ bị mờ ảnh do bức ảnh ở xa sẽ bị kéo dãn ra khi kéo gần trong cùng 1 phối cảnh, copy từ gần về xa thì lại k sao=> copy xa để xa, gần để gần)
+
+(các cách làm sắc nét ảnh:1.Filter->Sharpen->ShakeReduction->chỉnh BlurTraceBound/Smoothing(khá lâu);2.Filter+Sharpen->Sharpen/SharpenMore/SharpenEdges(máy chỉnh);3.Filter->Sharpen->SmartSharpen->chỉnh Amount(mức độ nét),radius(vùng giao nhau),reducenoise(giảm nhiễu); TT vs Unsharp Mask;4.CTRL+J(dùng vs ảnh gốc r nhét lên đầu)+HighPass+opacity)
+(ảnh bị sai focus=> kiểu 1;chỉnh ảnh nét bth=>kiểu 3;chỉnh nhanh ảnh(kiểu 2);)
+(thực chất tăng độ sắc nét là tăng độ tương phản giữa các pixel màu, làm cho các pixel có màu khác nhau dù chỉ 1 chút cx trở nên khác biệt hơn khiến cho các chi tiết nhỏ cx trở nên rõ ràng=>(ta thg có thói quen chỉnh bức ảnh sắc nét hơn 1 chút sau khi chỉnh xog)1 bức ảnh thiếu sắc net và cần chỉnh là 1 bức ảnh có các chi tiết nhỏ, các đường giao k sắc nét rõ)
+
+Horizontal/VerticalTypeTool=>T  +ClickOnScreen+đánh chữ+CLICK V=>CTRL+ENTER  +Click+Tạo ô hình chữ nhật trên screen+đánh chữ +Type+PasteLoremIpsum(đoạn văn mặc định) +DOUBLECLICK+Layervănbản(chọn layer văn bản) (+click hình đầu tiên chỉnh hướng) +OPTIONBARR+chọn bôi đen text+chọn font+chỉnh font style +chỉnh kích thước/CTRL+SHIFT+</>+ chỉnh răng cưa+căn lề+chỉnh màu (=>chú ý bôi đen trc khi làm ) 
+=>CharacterTable(chỉnh đc mọi thứ trên option bar=>ưu tiên dùng)  +bôi đen đoạn+chỉnh leading  +đưa con trỏ vào giữa 2 chữ+setkerning  +bôi đen+settracking=>ALT+RIGHT/LEFTARROWKEYBOARD +bôi đen+chỉnh vertical/horizontal scale  +bôi đen(kí tự)+chỉnh baseline
+(1 thanh giả các GT dù k tồn tại vs phông chữ:Bold,italic,uppercase,in hoa mà chữ cái đầu vẫn to,lên trên,xuống dưới,gạch chân,gạch ngang)
+ParagraphTable=>căn lề cân đối hay chỉ dòng cuối bị dịch  +bôi đen+indentleft/right  +indentfirstline  +spacebefore/after(là 1)  +hyphenate(gạch nối cho văn bản tiếng anh quá dòng)
+
+(Tạo hình)PenTool=>P +Shape +PathSelectionTool(cả)/DirectSelectionTool(di nốt)=>A(nên dùng thay vì moveTool) +Select(AllLayer)
+RectangleTool=>U +Nhấp rê chuột/LeftClick(khi muốn chọn kích thước cụ thể)  +OPTIONBAROFPATHSELECTIONTOOL=>PropertiesTable=>chỉnh W,H,X,Y,color,kích thước viền,loại viền,vị trí viền,loại góc viền,bo góc hình,màu viền, bo tròn từng góc, độ bo tròn (TT các Tool khác)
+PolygonTool(+Chỉnh sides)
+CustomShapeTool+chọn hình=>RIGHTCLICK vẽ+SHIFT(đúng tỉ lệ)  vẽ 1 hình bất kì bằng đồ họa vector(PenTool)(phải vẽ kín về điểm ban đầu nhé)=>EDIT=>DefineCustomShape=>OK(đã lưu vào thư viện custom shape) =>Rasterize biến đồ họa vector thành kiểu raster
+  
+(Cách chuyển từ vùng chọn sang path)->RIGHTCLICK vùng chọn->makeworkpath
+
+Vẽ hình bằng tay=>HighPass(2.0)+NewLayer+fillWhiteColor để ở dưới->BlendingLayer->LinearLight+CTRL+E
+
+(Cách biến 1 hình vẽ thành hình vector như vẽ bằng pentool mà k chỉ chọn đc mỗi cái edge bên ngoài, chọn đc cả các nét bên trong)=>tạo 1 bức vẽ nhu bên trên cho ảnh->magicWandTool(Tolerance=1 + contiguous)=>chọn từng vùng rời rạc, k chọn sâu quá+chuyển sang path, lưu =0.5 net vẽ=> khá vô dụng vì cx chả cần để làm gì
+
+LasrFilter=>ALT+CTRL+F =>dùng TT luôn chứ k phải mở bảng để dùng lại
+Filter+FilterGallery +chỉnh các thông số
+
+Filter+Blur->Average(màu trung bình) Blur(nhẹ)/BlurMore=>khử nhiễu,răng cưa BoxBlur(pixel k bị lẫn vô nhau) GaussanBlur(pixel lan tỏa đan xen smooth) LensBlur(Các loại lá trên ống kính, k nên dùng do photoshop làm k tốt và k pb đc bằng mắt thg) MotionBlur(lia máy anh)(+chỉnh angle) RadialBlur(=>vặn ống kính máy, tập trung vô 1 điểm)(+chỉnh amount+chỉnh vị trí di trên hình+chinh quality(chỉnh nhiễu)+chỉnh zoom(hút)or spin(xoay)) ShapeBlur(các pixel lan tỏa theo hình thù xác định=>k nhìn thấy nên k dùng) SmartBlur(làm mờ nhưng k mờ edge=>mịn da) SurfaceBlur(TT smartblur nhưng xu hướng phủ lên 1 lớp màu nx)
+
+(Có thể tạo vùng chọn trc r blur chỉ tác động lên vùng chọn)
+Filter+BlurGallery-> FieldBlur(+chỉnh mức độ, như gaussanBlur)->có thể đặt nhiều điểm,chỗ nào k muốn blur thì đặt 1 điểm+chỉnh blur là 0 +OK/cancel  IrisBlur(chỉnh Blur theo hình xác định,chỉnh hình)  TiltShiftBlur(TT nhưng ngang)
+PathBlur(=>làm mờ theo hướng chỉ định+ backspace để xóa đg, click để chỉnh và thêm nút+phối hợp layermask)  SpinBlur(+click để tạo,BackSpace để xóa+chỉnh vị trí,phạm vi,độ nghiêng)
+
+Filter+Distort-> Pinch(phồng to thu nhỏ phần giữa)  PolarCoordinate(360 độ->ít dung) Ripple(sóng nước từng pixel 1)  Shear(+chọn)  Spherize(khác pinch ở chỗ dù ảnh có kich thuoc thế nào thì vẫn phồng or thu nhỏ sát 4 cạnh)  Twirl  Wave(+chỉnh amount,biến dạng sóng=>tạo hiệu ứng nhìn qua mặt nước)+wavelength,amplitude(các kiểu mặt nước)  ZigZag
+
+(Tạo ảnh động)TimeLineTable+CreateVideoTimeLine+convertToFrameAnimation+DuplicateSelectedFrame+Tạo mỗi frame là 1 ảnh bằng cách tắt bật mắt+Click dưới frame(set delay)chỉnh số lần chạy++TweenAnimationFrame(Nếu chọn tất cả frame or 2 frame xa nhau thì sẽ tự biến các frame ở giữa bị hòa quyện do chỉnh opacity,nếu chọn 2 frame đầu cuối thì sẽ tự tạo frame nối 2 frame đó,nếu chọn 2 frame kề nhau thì sẽ tạo ra frame ở giữa liên kết 2 frame đó=>FrameToAdd,Layer(chỉnh vs layer nào của frame đó(có thể tự chọn),hiệu ứng paramêtr))(phải buộc tạo frame bằng cách tắt mắt)->file->Export->SaveForWeb(CTRL+ALT+SHIFT+S)->GIF->Save
+
+ActionTable->Create New Set->CreateNewAction+Name+Set+Key+Color+Record/Cancel-> Thực hiện lệnh->Stop/Begin   +mở ảnh mới+ActionTable->Play/Dùng shortkey  ChonAction->kéo vào thùng rác
+(+Bỏ tick là bỏ lệnh nào đi trên acion,k đổi đc thứ tự hay chèn j khác)
+(lệnh mở cx lưu nên k nên dùng lệnh đó khi đang record)
+
+(nên dùng cả save cả close trên action)File+Automate+Batch +chỉnh set,action,source(bridge,folder trên máy,file đang mở trên photoshop),destination(chỉnh lưu trên folder mới,or vừa lưu vừa chọn, nhưng nếu có save sẵn r thì lưu TT luôn)-> nếu k thì choose link save
+PDF Presentation(tạo file pdf từ các ảnh nào)->Browse(chọn file) +(+Addopenfile(chọn file đang mở)) 
+ContactSheet(lệnh tạo liệt kê các file ảnh trên 1 tờ in nào đó)->chọn sourceImage,chooseLinkfile,chỉnh các thứ->OK
+CropAndStraightenPhoto->cắt và làm thẳng ảnh hiện tại tự động-> thôi thủ công đi
+ConditionalModeChange->Chuyển đổi ko gian màu ảnh hiện tại về k gian màu gì(dùng cái này thêm action để chỉnh hàng loạt, ví dụ cho in ấn từ loạt ảnh)
+LensCorrection->Dùng lenscorrection vs hàng loạt ảnh+ chọn source và browse
+
+SliceTool=>C (+dùng vs ruler để cắt cho chuẩn) +saveforweb(tìm địa chỉ nó sẽ nhét file image vô+imageonly) +RIGHTCLICK+DeleteLayer(chọn thứ tự slice từ ban đầu thật đúng)/PromoteToUserLayer
+(dùng khi muốn mỗi ảnh sang 1 bức ảnh mới)
+
+Layer->LayerStyle=>DOUBLECLICKLAYER->style(chỉnh style cho layer có sẵn)  +chọn style+nút nhỏ+import/export style +newstyle(khi chọn style các option khác tự động click)
+or RIGHTLICK+BlendingOPtion->blendingOption->AvancedBlending->FillOpacity(chỉnh cho pixel mờ k ảnh hưởng đến layerStyle) +Knockout(chỉnh chung vs fillopacity)->None(chỉ mờ mỗi layer đó),Shadow(chỉ mờ layer trong group đó nếu nhét vào group),Deep(mờ toàn bộ vượt ngoài group)->Dù mờ kiểu j mà nếu gặp 1 cái background thì cx sẽ nhìn đc=>chọn layer->Layer+New+Background from layer(chuyển 1 layer làm background)->chuyển lại bằng thao tác tương tự or doubleclick vào khóa(=>thg dùng tạo hiệu ứng cho chữ và hình)  +BlendIf(có ba kênh màu chọn kênh màu nào sẽ ưu tiên màu đó mà thôi, màu xám sẽ là ảnh hưởng vùng đậm nhạt)(=>công cụ giúp xóa bỏ phần tối và phần sáng của layer đc chọn hiện tại)->pb:ThisLayer(chọn vùng sáng tối ở layer hiện tại mà xóa)/UnderlyingLayer(chọn vùng sáng tối của layer ngay dưới nó(UD: viết chữ lên tường cũ)
+(các nút ở dưới ta k dùng luôn mặc định)
+                                   ->bevelEmboss(chỉnh hiệu ứng nổi ở cạnh)->Structure->Style(chỉnh kiểu trong,ngoài),technique(chỉnh hiệu ứng mềm, cứng),depth direction(độ nghiêng,hướng đèn),size,soften->Shading->angle+altitude(chỉnh độ gần xa của đèn, hướng ánh sáng),glossContour(chỉnh kiểu đường nét theo chiều dọc các đường kẻ),Highlight/ShadowMode(chỉnh màu và mức độ vùng sáng or tối của vật do bị đèn chiếu vào)
+                                   -> Contour(chỉnh hình dáng nhưng theo chiều cong theo cái hình chứ k phải theo dọc như glossContour, chỉ chỉnh ở cạnh nổi)
+                                   -> Texture(chỉnh hình hoa văn trên cả layer luôn, scale là độ gần xa, depth là độ nghiêng đèn)
+                                   -> Stroke(tạo đường viền or toàn chữ đều đc(khác với cạnh nổi bảo Bevel))->size(kích thước,có thể để size to phủ kín hình là chữ nếu tạo hiệu ứng toàn chữ),Position, BlendMode+ tắt overprint ms dùng đc,opacity  +FillType ->Color/Pattern/Gradient
+                                   -> InnerShadow(tạo chữ như 3D, nên dùng vs text)-> Structure-> BlendMode(chỉnh màu cho phần đổ bóng),opacity,angle,(thực chất cái là ta chỉnh cái chữ hiện tại đi sang vị trí khác so gây hiện tượng đánh bóng)distance là chỉnh vị trí chữ đó so vs gốc,size chỉnh độ nhòe chữ thực vs màu chữ gốc, choke chỉnh nét chữ gốc nhỏ lại,contour,Noise
+(kinh n0:chỉnh cả 3 thanh về min, r chỉnh size lên 1 tí đủ nhòe, chỉnh distance r ms chỉnh choke)
+                                   -> InnerGlow-> Structure->BlendMode(để Normal),opacity,noise(nhiễu màu gốc),color/Gradient(dải màu viền và màu bên trong)  +Structure->Technique->Softer/Precise,source(đổi),choke(co vùng trong lại),size(nhòe vùng trong đi)  +Quality->Contour,Range(thu hẹp kiểu bth),jitter(chỉ phù hợp khi dùng gradient,làm nhiễu quyện 2 màu gradient)
+                                   -> ColorOverlay(chọn màu r chỉnh opac thôi, hòa trộn cx chỉ là đậm nhạt=>luôn Normal)
+                                   -> PatternOverlay-> BlendMode(Nó như kiểu phủ layer partten lên trên và ta chỉnh blend cho layer đó),opacity,pattern,scale
+                                   -> DropShadow (cho thêm bóng shadow)-> Structure-> BlendMode(điều khiển shadow trộn với layer dưới nó),opacity,angle,distance,spread(khiến cho các đường nét phồng ra của shadow, VD chữ thì bị béo ra),size  Quality->Contour,Noise
+
+
+
+EDIT+KeyboardShortCut=>CTRL+ALT+SHIFT+K
+
+RulerTool->I vẽ+kéo di chuyển ruler+clear+di chuyển vị trí đầu ruler 
+
+RotateView  chọn góc cụ thể cho layer(k thực sự quay layer=> muốn xoay 180, dùng CTRL+T+HoldALT xoay)
+
+Thước kẻ=>CTRL+R +kéo từ trên or từ trái cái thc ra 1 đth +muốn xóa thì dùng v kéo nó về lại
+
+(Kinh nghiệm chỉnh chân dung: chỉnh sao cho hạn chế vc copy thôi, Các layeradjustment chỉnh sau cung.Thật ra nếu lỡ chỉnh trc thì ta nhét lại lên trên đầu cx ok thôi, chỉ trừ liquify)
+
+EyeDropperTool=>I  navigatorTable  File->Close=>CTRL+W
+
+(Dùng moveTool ở các công cụ khác =>CTRL) ShowTransformCross(cx như CTRL+T)
+
+CTRL+ALT+I->imageSize(ảnh) CTRL+ALT+C->Canvassize(nền làm vc)
+
+(chỉnh màu đen thành trắng trắng thành đen=>CTRL+I (tạo âm bản=>có thể dùng để tô nhanh màu đen cho ảnh trắng k cần qt đến màu hậu hay tiền cảnh))
+
+BUTTONF(chỉnh screen view)
+
+BUTTON D(đưa màu tô về mặc định trắng đen)
+
+(khi dùng CTRL+T thg dùng thêm ALT để ảnh k bị bay đi)
+(pb selectInversion và invert trong image adjustment=> nếu muốn chọn inversion có cách khác là right click vùng chọn+selectinversion)
+
+(Nếu ta tắt mắt với chủ ý crop 1 layer nào đó thì sẽ k đc như ý muốn vì crop sẽ tác động tới toàn bộ layer=>chỉnh smart objet hoặc dùng BUTTON delete khi chọn)
+
+(chú ý chọn layer trc khi làm bất cứ cj k sẽ lỗi)
+Select+Deselect=>CTRL+D
+[ ] RIGHTCLICK => ALT+RIGHTCLICK+MOUSEMOTION
+
+EDIT+PRe+HUD Color Picker=> SHIFT+ALT+RIGHTCLICK
+

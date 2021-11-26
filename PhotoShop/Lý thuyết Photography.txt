@@ -1,0 +1,44 @@
+﻿Color setting không gian màu sRGB dùng cho ảnh load lên web nhẹ hơn Adobe RGB nặng hơn do nhiều màu hơn. Tick ask để convert mỗi khi dùng sai
+RGB trong máy tính điện tử vì màn hình màu đen và trong dải k có màu đen.Ngc lại,CMYK trong in ấn vì giấy có màu trắng, kết hợp 3 màu lại ra đen. Cần nhớ 6 màu cơ bản blue,magenta,red,yellow,green,cyan.Dùng dải màu nào cx có thể tạo ra các màu hiện tại mà ta biết
+HUE: dải màu nguyên gốc(tạo từ 6 màu CB);Tint(sắc màu nhẹ):color+white;Shade(sắc màu đậm):color+black;Tone:Dải sắc độ của 1 màu nào đó, gồm 3 TT kia
+saturate(sắc màu xỉn):color+gray=>Chỉnh saturation sẽ làm màu tươi hơn,bão hòa hơn,k bị xỉn xóa màu xám đi, còn giảm thì là tô thêm màu xám vào
+
+Photoshop dùng đồ họa raster.Chất lượng 1 bức ảnh có 2 yếu tố:số lượng pixel(biểu diễn đc các chi tiết nhỏ,sợi lông),số lượng màu(bitdepth, tạo dải chuyển màu gradient mượt,k gợn sóng).Photoshop mặc định là chỉnh sửa ảnh vs 8bit. VD: khi
+ta truyền bức ảnh 16bit vào photoshop dùng mặc định là 8 bit thì ta đc quyền chỉnh sửa ảnh vs 8 bit màu chứ k phải bức ảnh bị thu nhỏ về 8 bit màu. Nếu ta chỉnh lớn hơn thì ta đc dùng nh màu hơn. Nhưng vì mắt ta k pb đc 8bit và 16bit nên
+dùng 8bit màu là ổn r.Thanh hiển thị file cho ta biết số bit màu và loại k gian màu RGB hay CYMK ta đang dùng.Minh họa: 1 bức ảnh có độ dài 3000 pixel nhìn thực hơn bức 2000 pixel.Tùy loại máy mà 2 yếu tố cao hay thấp
+Khi dùng 8 bit: Image+mode->đổi bit. image+adjustment+posterize->giảm số lượng màu
+
+Khi 1 bức ảnh đc chụp từ lúc ban đầu thì số lượng pixel trên bức ảnh đó ở thời điểm đó càng lớn thì chất lượng càng tốt(phụ thuộc vào chất lượng máy).Còn resolution nó k phải là thứ quyết định chất lượng bức ảnh. Nó là số lượng điểm ảnh
+trên 1 đơn vị(inch chẳng hạn).Theo quy chuẩn thì cho website thg dùng 72PPI còn trên phương tiện in ấn thì là 300PPI.Thực chất nó chỉ là cách bố trí điểm ảnh trên bức ảnh về mặt số lượng mà thôi.Khi ta nói ta đo độ dài bức ảnh theo đơn
+vị là pixel tức là ta mặc định là theo quy chuẩn vd 72PPI(pixel per inch). Khi ta chủ động tăng resolution thì chất lượng bức ảnh k đc cải thiện đâu, chẳng qua mật độ pixel 1 chỗ nó nhiều hơn. Nếu chụp máy đểu mà ban đầu ảnh lấy ra chỉ có
+ít pixel từ lúc ban đầu thì ta tăng lên cx vô ích. Cái chỗ mờ thì nó thêm nhiều pixel mờ hơn thôi. Lưu ý là khi tăng resolution và kích thước ảnh lên thì nó nặng máy hơn.resoltution cao mà ít pixel ko bằng resolution thấp mà nhiều pixel 
+từ lúc ban đầu.Khi ta resize 1 bức ảnh thu nhỏ thì hiển nhiên là chất lượng giảm do giảm pixel, khi tăng thì nó nội suy từ những pixel liền kề nên chất lượng k đổi.k có cách nào tự động tăng pixel mà khiến ảnh rõ hơn đc, chỉ resize thôi.
+
+Như v sẽ vô lí đặt ra câu hỏi rằng nếu ta cố định chuẩn 72PPI v thì 2 bức ảnh bị ép có cùng số lượng pixel khi chụp ảnh bằng mọi máy ảnh, chất lượng ảnh luôn như nhau? => Thật ra, khi chụp ảnh, kích thước k phải là thứ ta quan tâm. Ví dụ
+ta đăng 2 bức ảnh lên mạng. Ảnh nhỏ hay to thì nó vẫn sẽ hiện như v khi ta đăng lên. Như v, máy ảnh nào khi ta chụp cho ra 1 bức ảnh có độ phân giải 72PPI mà to hơn trong cùng 1 cảnh thì sẽ nét hơn.Vấn đề đc giải quyết. Ví dụ khi ta nhét 
+1 bức ảnh vào photoshop(chưa đc chỉnh sửa).Ta k quan tâm đến kích thước.Để ảnh fit màn hình, nếu thấy đoạn ngắn tũn mà cả ngàn pixel thì ảnh tốt r, ngược lại full màn hình mà có hơn 1 ngàn thì là k tốt, nhìn kĩ sẽ
+thấy gợn sóng. Khi phóng ta lên dù cùng bị mờ đi nhưng cái ảnh đểu sẽ nhành chóng nhìn thấy từng hạt pixel trong khi ảnh tốt ta vẫn chưa thấy hạt pixel.K tính loại đã qua chỉnh sửa về mặt kích thước vì muốn đổi thế nào cx đc.
+Ta k cần để fit màn hình, tùy tỉ lệ dài rộng ta cảm nhận đc và đo là biết
+
+Adobe RGB là ko gian màu thg dùng khi muốn tạo ra ảnh chất lượng cao. sRGB thg dùng cho những ảnh bth đăng lên web do nó nhẹ. Dấu sao trên file photoshop là cảnh báo sai ko gian màu. Có 3 lựa chọn: 1 là chấp nhận dùng sai k gian màu(use 
+embeded profile), 2 là convert bức ảnh sang ko gian màu HT of photoshop để dùng, 3 là dùng ko gian màu của chính bức ảnh. Chú ý khi chọn dùng k gian màu hiện tại thì khi lưu nhớ tick dùng. Khi dùng máy ảnh sẽ cho ta 2 lựa chọn kgm như v
+
+Bên cạnh đó, máy ảnh cx cho phép ta chọn cách lưu ảnh khi chụp,có 2 cách là lưu dạng JPG và lưu cr2(máy canon).Ảnh JPG là ảnh nén,nhẹ,máy ảnh sẽ tự xử lí qua các công đoạn và cho ra bức ảnh đẹp đã qua chỉnh sửa vs 8bit màu/channel.Còn ảnh
+CR2 là ảnh raw chưa đc máy tự chỉnh sửa nhìn xấu hơn, tuy nhiên nó vẫn giữ 16 bitdepth. Do đó, ảnh raw có nh màu hơn, dải chuyển tiếp gradient đẹp hơn và dành cho ta chỉnh sửa thủ công, do 16bit màu nên khả năng làm đẹp cho bức ảnh tốt
+hơn.=> chụp jpg cho thợ ảnh k biết chỉnh sửa or cần lấy ngay, chụp cr2 cho chuyên nghiệp, biết sửa ảnh, sửa tốt hơn để máy ảnh tự sửa. Khi cho cr2 vào photoshop thì nó sẽ vào camera raw trc để ta chỉnh ảnh trc r ms vào đc photoshop
+Thợ ảnh chuyên nghiệp họ chụp raw để giữ 16bit r tự sửa, chứ lưu jpg còn 8 bit thì sửa ảnh nx sẽ xấu.ảnh nh màu thì chỉnh sửa nh lần nó cx k bị vỡ hay đứt gãy
+
+CameraRaw:chỉ click+alt ctrl0 để zoom AdjustmentTool+Giữ chuột WhiteBlance:fill màu ngc lại màu đó=> tìm màu trung tính trông bức ảnh rất thực.Adjustmentool=>nhan giữ RIGHTMOUSE+chỉnh TT lên ảnh. Thg dùng 2 cái saturation và parametric curve làm đổi độ đậm và độ sáng ở 1 vùng. xóa bẩn vs spot remove, gradient tạo vùng chuyển sáng tối, brush vs chỉnh sáng tối 1 vị trí. radial filter khoanh vùng r chỉnh bên ngoài, clear all. +TransformTool +AdjustmentBursh+giữ chuột phải điều chỉnh phạm vi, click chuột trái chỉnh vị tri
+Highlight làm giảm độ chói khi quá sáng, vibrant làm tăng độ tươi,sharpening làm nét
+
+Để đăng đc ảnh lên website, cần đảm bảo yếu tốt nhẹ và giữ nguyên đc màu sắc
+File->Export->SaveForWeb->CTRL+ALT+SHIFT+S->Chọn định dạng,preset+convertTosRGB+chỉnh quality/lưu high r cho vô tinypng.com
+Lưu jpg chất lg tốt hơn png, nhưng png 24 chất lượng tốt hơn jpg, tuy nhiên png24 rất nặng, chỉ nên để JPG high.Chỉ lưu png vs ảnh có transparency, tùy nặng nhẹ mà 8 hay 24. Ảnh gif thì chất lượng thấp chỉ lưu ảnh động
+
+mã màu # là hexadecimal dùng trong html, còn có mã màu trong cmy,rgb
+
+view snap làm vùng chọn từ áp vào các edge khi chọn auto bật r
+
+Cách trích 1 layer thành ảnh-> cho thành smartobject r lưu là nhanh nhất, cx dùng đc vs cả 1 thư mục các layer=> thư mục layer cx chuyển sang smart object đc
+/
+PencilTool=>B dùng tô thô ráp, các điều chỉnh của brush k có tác dụng  EraseTool->E +ChoseLayer+DrawOnlayer(xóa ht khỏi layer)/Tạo cùng chọn+DELETEBUTTON

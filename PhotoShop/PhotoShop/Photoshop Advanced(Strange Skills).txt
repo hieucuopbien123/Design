@@ -1,0 +1,182 @@
+﻿Cách chỉnh độ bóng sáng(cho mắt):
+NewLayer+BrushTool(loại bút sắc nét+chỉnh nét nhất)->ChooseWhiteColor->DrawACircleOnTheEye->EraseTool(chọn kích thước to hơn con ngươi 1 chút+full hardness)->DrawEraseOnPupil->chọn tẩy có hardness nhỏ rồi xóa phần thừa->Filter+Blur+GaussianBlur cho cái layer đó ->BlendingModeLayer+Overlay->chỉnh độ ảnh hưởng bằng OpacityLayer->chỉnh vị trí bằng LayerMask+BrushTool(màu đen)+OpacityBrush
+(Vđ là chế độ hòa trôn overlay nó xóa màu xám và đồng thời làm cho màu sắc trở nên sáng nổi hơn k như softlight chỉ loại bỏ màu(nó làm sáng tối hơn 1 chút và tối sáng hơn)-> rất thích hợp chỉnh độ sáng trong dễ nhìn cho màu mắt)
+(nếu dùng dodgeTool cho nó thì nó như phủ lên 1 lớp sáng hơn còn hòa trộn overlay nó tạo màu sáng trong còn đẹp hơn thế, cảm giác như bản thân màu đó đổi luôn chứ kp phủ lên 1 lớp)
+->dùng layerStyle->BlendingOption->BlendIfGray->chỉnh underlyingLayer kéo thanh tối, nhấn giữ ALT r kéo thanh tối sẽ giảm hiệu ứng đi(nhìn như thật)
+(qtr là nó dựa vào vùng sáng tối của layer dưới là mắt nên nhìn rất thực)
+(muốn mất layerStyle=> rightclick on biểu tượng layerStyle sau khi chỉnh ở trên hình layer->ClearLayerStyle)
+->chỉnh độ sáng cho mắt (như bth vs layermask+curve)
+->(vẽ chi tiết cho mắt)(vẽ cho cái vùng ta tạo bên trên):dùng curve sáng mạnh->layermask cho nó màu đen->dùng brush màu trắng opac nhỏ(tầm 17), nét bút cực nhỏ vẽ lên những đường thẳng theo bán kính mắt(vẽ cho kín)->cho nó vào group r lại chỉnh layermask group bỏ đi vùng vẽ thừa phần cạnh
+(có thể dùng 2 layermask cho 1 chức năng bằng cách cho vào 1 group và dùng layerMask cho cả group)
+->Tương tự dùng curve tối cho mắt r dùng brush nét bút cực nhỏ với opac nhỏ và vẽ tương tự-> dùng layerStyle cho nó và chỉnh giữ ALT+underlying layer bên màu trắng(y như thật r)
+(LayerMask với công cụ chỉnh adjustment bấm vào biểu tượng đầu bên dưới khi mỏ bảng ra sẽ tự clip nó vào trong layer dưới)
+->(vẽ bóng trắng cho mắt)lấy or tạo bóng trắng copy sang layer hiện tại->chỉnh curve cho nó, chỉnh opacity,transfrom cho nó bị méo đúng hình
+->(clean cái đường vein cho mắt trắng mượt hơn)NewLayer->HealingBrush->BlendMode+Lighten->xóa gân
+(blendmode với healing Brush ta set lighten, tức là làm sáng hơn. Ở đây, vùng màu trắng sẽ gần như k ảnh hưởng(vì nó trắng r nên k sáng hơn đc),chỉ ảnh hưởng vùng tối, tức các gân trên mắt)
+->(khắc phục màu và độ sáng tối cho mắt sau khi xóa gân-Kỹ thuật cao)TH cái lòng trắng giữa mắt và khóe mắt nó bị sai lệch về màu và ánh sáng
+->(Kỹ thuật dodge and burn):brush soft round hardness=0,2 màu đen trắng, giảm flow về 1%,thao tác trên layer trống mới với blend là softlight->tô đen trắng vào vùng ta cần sao cho cân bằng từ sáng đến tối(do ta chưa chuyển màu nên có thế màu sai sẽ làm ta thao tác sai nên ta chuyển sang đen trắng nhanh->new layer+solidcolor->chọn màu xám nào đó->chọn lại layer cũ và tô sao cho từ trắng đến đen mượt mà)
+(Solid color đơn giản là tạo ra thêm 1 layer có mà nào đó k có gì khác nhiều)
+(dùng softlight sẽ loại màu xám, tức là trắng thì nhạt hơn mà đen cx nhạt hơn chỉnh cho chuẩn)
+->khắc phục màu: newlayer blendmode Color(để tô lên nó đc trộn màu nhạt đi theo sáng tối),set cho flow tầm 20->lấy mẫu màu liên tục và tô sao cho dải chuyển tiếp mượt mà với soft round brush 
+(lấy màu nhanh =>giữ alt)
+(chỉnh 1 mắt xog áp dụng cho các mắt khác đc)
+
+Cách chế tạo logo cơ bản:(giả sử logo thông thường có 2 phần là chữ và hình)
+Tạo CTRL+N 1 khổ giấy mong muôn->Ta tạo ra chữ logo nghệ thuật với màu và kích thước tùy ý với CTRL+T,chèn ký tự bằng glythTable=> dùng công cụ vẽ vector để vẽ hình và tô màu->chỉnh sửa chữ và hình bằng layerStyle or brush tool or phối hợp tùy ý(layerClippingmask cx nhét background đằng sau vào chữ đc)->xog xuôi ta chuyển ảnh to thành smartobject r resize tùy ý
+EraserTool=>E(xóa thành transparancy)-> magicEraserTool-> xóa bộ phận cùng màu bị giới hạn bởi edge (còn 1 cách nx là chọn r delete nhưng xấu hoắc)
+Khi dùng đồ họa vector để vẽ, nó sẽ tự tạo ra 1 layer mới và auto là SmartObject.Ta cứ thao tác bth nhưng r cuối cx phải rasterize khi cắt or chỉnh.Khi vẽ nhiều hình khối bằng vector, ta có thể chỉnh vị trí chuẩn bằng công cụ moveTool có các tùy chỉnh vị trí layer. 
+Có snap và smartguide, chuyển về moveTool+ấn Ctrl+ di chuột vô sẽ thấy vị trí 1 khoảng cách
+
+Sự khác nhau giữa Fill và opacity ỨD tạo phong cách chữ nối trên bề mặt chất liệu:
+Fill giống opacity chỉ là nó k ảnh hưởng đến layeraStyle
+Tạo hiệu ứng chữ với fill: Dùng Shadow/BevelAndEmboss cho chữ của ta->giảm fill về 0 tạo hiệu ứng
+
+Chế độ hoà trộn được dùng rất mạnh mẽ với các chức năng khác nhau:
+ỨD: chỉnh sắc nét bức ảnh
+Dùng highpass->hoà trộn hardLight(sắc nét về đường nét)
+Dùng ảnh copy đen trắng,chỉnh level=>hoà trộn overlay(sắc nét màu,độ sáng)
+(Mạnh như highpass mới dùng hardlight, đen trắng bth thì overlay thôi)
+Kết hợp unsharpmask nếu ảnh cũ or smart unsharp nếu biết kiểu nhoè gì)
+Tất cả gom thêm chỉnh fill 
+(Thông thường kĩ thuật chỉnh cơ bản luôn là chỉnh màu và ánh sáng, kể cả khi ghép ảnh, làm sắc nét ảnh,… đều phải có đủ cả 2, chuyên nghiệp thì chỉnh shadow/hl)
+
+Kỹ thuật ghép một ảnh nhỏ chi tiết vào ảnh lớn(đầy đủ các bước):
+Cắt hoặc dùng vùng chọn+layermask ảnh nhỏ->tìm hướng sáng r chỉnh cùng hướng sáng với Ctrl+T+RightClick+Flip
+CTRL+T chỉnh ảnh nhỏ vào đúng vị trí=>ColorBalance chỉnh màu+brightness/contrast chỉnh ánh sáng+layerclipingmask->bh ms refineEdge mới hợp lý
+(mọi thao tác chỉ với ảnh nhỏ đều clipping mask lại)
+Liquify ảnh lớn+chỉnh opacity để ảnh có hiệu ứng khi ghép nếu cần->ghép vô r chỉnh vùng liquify sao cho hợp lý
+Kỹ thuật đánh bóng shadow: 
+SoftShadow:chọn ảnh lớn dùng levelsLayer-> chỉnh tối+phủ lớp màn tối->layerMask->brushTool màu trắng tô lên vùng ảnh nhỏ gần viền(flow xuống cực thấp)
+(Cứ dùng brush là nhớ chỉnh flow)
+Chỉnh softShadow trên cả ảnh nhỏ ở các khe,viền dùng layerclipingmask
+ContactShadow:chọn ảnh lớn làm tương tự->lần này tô vào các vùng viền và vùng ngược sáng
+Kỹ thuật DodgeAndBurn đánh bóng bề mặt nổi(kỹ thuật này chỉnh mắt có=>học kỹ hơn):
+Xác định vùng lồi ra hoặc vùng sáng nổi lên->chỉnh flow brush rất thấp->create new layer->tô màu xám lên(muốn có 50% xám thì ấn vào màu trên ToolBar, chỉnh B là 50->ok)->blendMode:Overlay(dùng overlay cho 1 layer màu xám sẽ giúp ta chỉnh độ sáng tối khi tô đen trắng lên layer đó)->brushTool flow thấp->tô trắng lên các vùng nổi và đen ngay bên cạnh ở layer đó, linh hoạt sao cho vừa mắt->tô gray nếu muốn xoá
+(Dùng ảnh copy đen trắng để tô lên cho dễ nhìn độ sáng or tạo layer toàn xám overlay cx đc)
+Gom tất cả thành 1 ảnh->dùng tính năng clarify of cameraRawFilter->làm sắc nét màu sáng tối=>tạo hiệu ứng tương phản như trong poster các bộ phim ấy
+Chỉnh các thanh trượt ở trang đầu phù hợp tương phản màu sắc,ánh sáng. Nếu thấy màu nào nổi quá có thể giảm bớt với curve->point ở trang 2, kéo ở góc trái dưới sẽ từ từ hơn. Trang 3 bên phải qua chỉnh Amount sẽ tạo hiệu ứng 4 góc tối giống phim ảnh
+(Ta có thể làm nv or làm cách khác để nhuốm tông màu cho ảnh, nhìn ảnh ghép thực hơn)
+Kỹ thuật xoá ảnh nhuốm tông giúp màu sắc cân bằng:
+Dùng sau clarify sẽ giúp ảnh trông thực mà đỡ bị nhuốm tông->newlayer->chọn màu đáng lẽ ra là màu trắng trong bức ảnh(nhưng bị nhuốm lông khiến nó hết trắng)->solidcolor->blendMode:Divide->doubleClickOnSolidColorLayer->tick vào chữ B(Brightness)->kéo thanh trượt lên nếu màu bị chói quá
+
+SolidColor khác layer màu bth ở chỗ, solidColor sẽ chỉnh màu nhìn thấy ngay
+
+Chế độ hoà trộn devide sẽ tạo ra màu =256÷(màu trên÷ màu dưới)=>cơ chế:ví dụ bức ảnh bị nhuốm tông khiến vùng màu đáng lẽ trắng thì lại k có màu trắng->ta chọn màu đó và dùng với solidColor+divide thì sẽ tạo ra 256÷(1÷1)=màu trắng, các vùng tối gặp màu trắng cx sẽ sáng lên=> tuy nhiên nếu như màu trắng chói quá làm mất các chi tiet thì chỉnh tiếp brightness như trên
+
+Ta có thể chỉnh ảnh sáng lên, tối đi chỉ bằng cách duplicate layer+blendmode+opacity(dubgf multipley or screen/ UnderlyingLayer/colorange)
+
+Lỗi chỉnh ảnh:khi nhuốm tông hay thử hoà trộn hardlight sẽ bị cháy sáng or tối đặc ở 1 số vùng=>fix bằng cách dùng colorRange->shadow chọn vùng shadow->thêm feather để vùng chọn mượt mà(select->modify=>shift+f6)->layer mask
+
+Tổng hợp các kỹ thuật match color khác cho subject ghép ảnh:
+Curves cx dùng đc như level chỉnh sáng tối với 3 bút, dùng chọn vùng sáng nhất,tối nhất,trung tính của ảnh lớn r clip cho ảnh nhỏ khi ghép->chọn bút chỉnh samplesize:5by5average
+Pp tạo hiệu ứng global: trc ta tạo bằng clarify hiệu ứng phim ảnh như nếu muốn 1 tông bất kì thì colorLookup đẹp vl(MatchColor chỉ dùng với phong cảnh,solidColor thì nhuốm tông màu thô quá)
+LayerAdjustment->ColorLookup(dùng nh đè lên nhau cx ok)->ColorLookupTable->3DLUT File->hoà trộn softLight+opacity/layerStyle underlyingLayer chỉnh vùng tối sáng quá đậm
+Thêm Blur để hoac trộn mượt(pp chỉnh độ sâu)->concertToSmartObjecf + BlurGallery (LightBokeh cho vùng sáng)
+
+Tổng hợp các kỹ thuật chỉnh ép màu cho phong cảnh(vd:từ sáng sang tối):
+Clarify(phim ảnh)/ colorclookup(hiệu ứng chung)/ matchColor(tùy ý cả ảnh 1 màu)/ curves(level)(thủ công hoàn toàn cả màu và ánh sáng)/photoFilter(hiệu ứng chung, bảo toàn độ sáng)/…
+Chỉnh layerStyle underlyingLayer cho vùng bị quá(sẽ k ảnh hưởng)
+
+Hiểu curves:đặt điểm và chỉnh(đặt điểm mép thì là vùng shadow hay highlight 2 bên bth)/kéo điểm mép trái phải cx như kéo cái thanh đen trắng bên dưoi->tất cả là chỉnh độ sáng thôi. Kéo mép trái phải trên dưới là chỉnh sáng tối vùng sáng vùng tối
+
+Kỹ thuât tự thêm ánh đèn phát sáng:
+Khi làm chuyên nghiệp thì họ làm riêng từng vùng tối sáng, tổng quát và chi tiết
+Th tổng quát cần làm tối ảnh cho ánh sáng nổi lên:Chỉnh curve cho tối đi +áp màu
+Chỉnh vùng sáng highlight:Dùng vẽ sáng cho nó theo hướng sáng từ nguồn(flow cực thấp)vẽ cho các vùng sáng lớn ánh sáng chiếu tới->vẽ cho các khe, các mặt nổi hứng sáng thêm warm ->curves sáng warm+layermask->tô cho các vùng tương tự +underlyingLayer 
+Thêm sáng cho vùng tối(tối thì k cần warm): tạo curve mới tương tự
+Chỉnh highlight cho vùng nổi chi tiết(curve tương tự)/cho các chi tiết như mắt,k(để chỉnh đc chi tiết nhỏ,dab lớn r xoá phần excess)
+Chỉnh shadow cho vùng nho chi tiết(curve),vùng khuất
+(Chỉnh curve chú ý tạo constrast khi chỉnh sáng vùng sáng, tối đi vùng tối)
+Thêm hiệu ứng đèn sáng:
+Chỉnh màu:tạo global màu vàng áp lên vùng gần nguồn sáng
+Chỉnh ánh sáng(contrast):tạo curve trắng dab lên 
+Chỉnh đèn:brush trắng dab lên nguồn sáng 1 quả cầu tròn(trên layer ngay trên layer nguồn nhé vì màu trắng tô lên trên tâts cả nhìn k thật, đặt nó trc global và các cái khác)->blendmode:colorDodge->(bắt buộc) underlyingLayer bỏ vùng tối+transpsrency shapes layers(vì ta muốn đèn khi di chuyển nó sẽ k tác động các vùng khuất, tối+di chuyển đc đèn soi mọi vị trí+chỉnh fill cho độ sáng đèn mà tính chất transparency+underl gĩu nguyên
+(Thay vì cứ phải lo brushTool đậm nhạt ta cứ tô đâm r dùng opacity layer)
+
+UnderlyingLayer cũng như colorRangeShadow nhưng nó chỉnh mức độ hay hơn, colorange chọn vùng hay hơn với layermask
+
+Kỹ thuật làm cho bức ảnh sặc sỡ tươi màu mà ko bị hỏng:
+Tạo 2 LayerAdjustment->ColorDodge/Burn mỗi cái khoảng 10%. Tăng thanh saturation nếu muốn sặc sỡ hơn
+(ColorDodge/Burn sẽ giúp chỉnh vùng tối or sáng)
+
+Nhuốm ảnh đổi tông màu cho 1 vùng màu: dùng solidColor và chỉnh fill+layermask(ta chọn đc bất cứ màu j cx đc)
+
+Phân biệt fill/opacity với 8 blendmode:opac luôn làm mờ toàn bộ layer k khác biệt
+colorBurn:fill sẽ giảm ảnh hưởng vùng tối chậm hơn,khiến cho phần nào vùng tối vẫn bị hoà trộn còn vùng sáng đã hết màu đó
+Tương tự ColorDodge: opacity như tạo 1 lớp màn màu mờ toàn bộ còn fill giảm mạnh vùng tối, khiến cho phần nào layer vẫn bị hoà trộn rất vừa mắt
+Với 8 loại blendmode này có thể dùng với blendingOptions->bỏ chọn TransparencyShapeLayer + vẽ bút brushTool với hardness thấp=> sẽ tạo ra hiệu ứng là cái shape của hardness được hiện ra rõ ràng nhưng chuyển thành tăng giảm độ sáng cho layer dưới kèm hiệu ứng như tên(burn thì hiệu ứng cháy xém, dodge là đèn sáng)=> tạo hiệu ứng hoà trộn đẹp mắt(nên dùng khi dùng fill và brush hardness)
+
+Phóng to ảnh giữ nguyên chất lượng:
+Ctrl+K->TechnologyPreview-> EnablePreserveDetail2.0Upscale->Ctrl+Alt+I->dôi sang PreserssDetail2.0->chỉnh kích thước+reduceNoise->ok
+
+Difference blendMode:cho layer trên sẽ tạo ra màu là difference RGB của 2 layer
+Ứng dụng: chỉnh thẳng layer/ chuyển trắng đen và difference layer đó copy với chính nó->dịch 1 tẹo->hợp nhất->invert->tạo tranh vẽ pencil
+
+cách tạo hiệu ứng in trên một bề mặt(k bóp méo) nâng cao:(vd: người vẽ trên giấy)
+tạo hiệu ứng vẽ bằng filterGalery(vẽ bút gì, chất liệu gì)+chỉnh sáng/tối,đánh bóng->tìm ảnh tờ giấy->hòa trộn giấy với người: để giấy lên trên, người ở dưới=> bây giờ cần nắm vững về blendmode và blendif. blendmode có ba loại xám,trắng,tối. chọn loại nào thì vùng như v ở layer dưới nổi lên, nhưng thực sự nó khiến cả layer dưới nổi lên, chẳng qua là ưu tiên vùng đó mà thôi. Còn blendif thì tùy thuộc vào việc ta thấy vùng nào ở layer nào cần hiện rõ-> ta chỉnh blendmode tờ giấy là multiply để màu tối của ảnh hiện lên->tuy nhiên tờ giấy bị tối đi sẽ không rõ các vùng sáng của nó nên blendif->lại thấy các nếp gấp ko rõ, cần cho các nếp gâp giấy(vùng tối)hiện ra đè cả lên người(khi ta tăng vùng sáng thì cũng khiến vùng tối giảm đi)->blendmodeoverlay tiếp thì tờ giấy trên sẽ tăng cường vùng xám tờ giấy-> tạo tông để hợp
+việc ta chọn overlay thì khiến vùng tối và sáng của ảnh dưới mang tông ảnh trên. Còn vùng xám hiện ra rõ nhất. Bản chất: Điều này rất hay khi apply vào tờ giấy, nếu chọn multiple sẽ khiến vùng tối ảnh dưới hiện rõ nét gần như tờ giấy trên ta chả thấy gì. Nếu overlay thì vùng tối ảnh dưới sẽ mang hình tờ giấy trên nhìn thực hơn, còn màu xám hiện rõ nhưng màu xám thường không có ảnh nào hoàn toàn xám cả nên hiện ra rõ nhất. Như v ta chỉ dùng multiply cho lần đầu để khiến vùng tối ảnh dưới lòi lên trên mà thôi
+
+kéo điểm trên curve lên tít bên trên điểm đó tự bị xóa
+
+Kỹ thuật hòa trộn 2 bức ảnh chuyên nghiệp với pp checkAndMatch:
+1)luminosityCheck:Tạo 1 layer SolidColor->chọn màu có saturation=0 nào cx đc->hòa trộn color->tạo layer curves ngay trên ảnh +layerclippingmask và chỉnh như bth sao cho phần màu ở object và khung cảnh hợp nhau
+(để có màu brightness =100 chọn trên cùng, saturation=0 chọn sát bên trái)
+(k dùng các pp khác vì sẽ cho sai kết quả vì dựa vào chỉ số brightness của màu nhưng con người ta quyết định màu sáng hay k còn phụ thuộc vào độ sáng tối của màu.Chế độ hòa trộn color khiến cho màu layer dưới bị mất đi và đc tô lên màu layer bên trên theo kiểu sơn vào.độ đậm nhạt của nó bị ảnh hưởng bởi ánh sáng và độ sáng tự bản thân màu đó chứ k ảnh hưởng bởi độ sáng của layer trên nên rất chuẩn để check. Ta kéo hết sang trái thì hue=0+saturation=0 nên chỉ còn là 1 layer không có cj hết. Khi color blend sang thì ta sơn lên ảnh dưới 1 màu hue=0 và saturation=0 là không còn màu gì. Lúc này brightness k bị ảnh hưởng mà "ko màu" này sẽ tự chỉnh sáng theo layer dưới dẫn đến ta có layer check sáng chuẩn do bỏ qua độ sáng của layer trên)
+2)ColorCheck: tạo layer solid color #808080 or hue=sat=0 brightness=50-> hòa trộn luminosity-> tạo curve cho toàn bộ và chỉnh thấp thấp để nhìn rõ hơn nếu muốn-> tạo curve cho object-> chỉnh 3 kênh màu bằng bàn tay sao cho cân bằng với ảnh-> ra ngoài chỉnh thêm tí nx là ok(với vùng màu của object mà ảnh k có thì k cần chỉnh)-> có thể phải tạo nhiều layer chỉnh các phần khác nhau
+(blendmode color sẽ mang hue,sat của blend color và độ chói của base color. Luminosity mang hue, sat của base, độ chói của layer trên. Nếu ta set layer solid color như trong pp thì luminosity ta sẽ chỉ thấy màu, color thì chỉ thấy độ chói layer gốc. Nếu ta thêm layer ánh sáng nx để nhìn rõ hơn cx chả sao vì độ sáng nó đồng đều k đổi)
+3)saturationCheck: tạo selectiveColorAdjustmentLayer->chuyển brightness về 0 với các màu->white black neutral thì cho là 100->chuyển absolete-> chỗ càng sáng càng có saturation cao->tạo hue/saturation và chỉnh(có thể tạo nhiều lần cho nhiều phần)
+4)Khi paste ảnh dùng pp refineEdge cũ đã từng làm. Khi paste vào phải chú ý hướng sáng phải đúng-> nếu ngược có thể flip trái phải. Nhớ đúng cả perspective
+DodgeAndBurnSkill:dùng lại luminosityCheck->dùng curve tối tô cho object->tô cho các phần nó ngược sáng,phần góc(nhìn từ xa cho dễ)+chỉnh opacity layer->chỉnh thô có thể bị hỏng hue/saturation nên chỉnh lại bằng hue/saturation AdjustmentLayer->holdALT+kéo vào layerMask để paste 2 cái giống nhau
+5)chỉnh Shadow/Highlight(dodgeAndBurn chỉ là bóng hướng sáng mà thôi, ShadowAndHightlight mới là chỉnh vùng tối sáng):tạo solidColor đen để tô(pp này cũng có cách khác ở phần trên khi thao tác với chi tiết nhỏ chia ra 2 loại shadow)->tô lên kể cả các vùng viền nhỏ nhất tạo 3D->tô cả các khe kiểu đường sọc(pp cũ có nói)(có thể dùng blendOption để loại bỏ vc tô vào các vùng sáng nếu dễ còn không thì làm thủ công như trên), người ta k tô màu trắng lên đâu, mà tô màu đen lên và loại bỏ màu đen đi theo các đường sọc(vẫn dùng luminosityCheck)
+solidColor màu trắng. Nhờ vào LuminosityCheck, ta tô sao cho các vùng màu trắng của người hợp màu trắng với cái background(k tô màu trắng lên các vùng nổi nữa nhé, vì ta làm với màu đen tạo tương phản chuẩn r)
+Sau cùng, có thể chỉnh màu thành khác hòa với tông nếu thấy hợp hơn màu đen
+6)hòa hợp màu vùng sáng tối: tạo 1 gradientMap cho ảnh object->chọn màu cho vùng shadow, hightlight bằng cách chỉnh hue,sat,bright liên tục sao cho hợp với sáng tối của background->giảm opacity phù hợp
+7)thêm shadow cho background bằng cách chỉnh tô solid đen cho nó gần vùng người đứng
+8)globalEffect+opac
+9)chỉnh thêm ánh sáng, màu sắc,... nếu cần
+
+Các cách tạo bóng đổ object:CTRL+J cái layer->CTRL+T cho nó+distort theo hướng bóng->dịch nó đi 1 đoạn->dropShadow cho nó->di chuột để dịch chuyển cái dropShadow->chỉnh các thông số->chỉnh fill về 0 opac giảm phù hợp
+(có thể distort xong đổ màu luôn cho nó cx ok, màu ta lấy ở các vùng bóng khác trên bức hinh)->pp chuẩn hơn
+
+Cách tạo ảnh phản chiếu qua gương: cũng CTRL+T->RightClick->FLipVertical-> dùng layermask tạo gradient đen trắng cho nó mờ dần ở dưới vì chiếu qua mặt kính mờ dần ở dưới mà->vẫn phải có bóng bình thường ngay dưới chân vật thể chứ kp mỗi qua gương
+
+tạo hiệu ứng vật thể bị kéo dài và bóp méo(hiểu công dụng của single marquee):
+copy layer và ấn mũi tên xuống r lại copy liên tục(ấn mũi tên sẽ di chuyển layer đang chon)->gộp các layer->singleMarqueeTool chọn phần kéo dài+copy nó sang layer ms->xóa cái thừa->CTRL+T cho cái layer vùng chọn(single marquee nó chọn 1 pixel tức vẫn có 1 hàng cực nhỏ chứ kp vô dụng)->giữ CTRL+kéo cho phần dưới dài ra->E tẩy phần thừa->CTRL+T->Wrap bẻ cong nó
+
+Tất cả về CheckLayer: 
+SolarCurve:khiến mọi chi tiết trở nên rõ ràng dù là nhỏ nhất=> tạo 1 CurveLayer->chuyển nó về dạng zigzag->tạo 1 layer trống ngay trên bản gốc->có thể chỉnh tiếp bằng HealingBrushTool, nhớ là chỉ để sample là CurrentAndBelow->Điểm đặc biệt nếu dùng SpotHealingTool là dùng SampleAllLayer nó k ảnh hưởng đến layer solarCurve->xóa sợi tóc nhỏ dùng SpotHealing thì chuyển mode sang replace(xóa sẽ k gây vết bẩn)
+LuminosityCheck(đã biết)
+(Khi dùng chỉnh với curve->có thể chuyển sang blendModeLuminosity->khi đó cái layer chỉnh chỉ ảnh hưởng đến độ sáng tối, k ảnh hưởng màu sắc, cản trở việc chỉnh sáng tối nhưng lại vô tình tăng sat màu)
+SaturationCheckLayer:C1->solidColor màu đỏ max->tạo 3 layer như thế và lần lượt tạo với 3 chế độ blend cuối trừ saturation(khi đó các thuộc tính kia lấy ở layer đơn sắc(thì như nhau), chỉ còn saturation là lấy ở layer dưới nên còn mỗi sat)->vùng càng đỏ càng nhiều sat
+                     C2:selectiveColor(đã biết)->thêm curve để nhìn rõ hơn->ấn ALT kéo thanh màu trắng về để làm tối đi nhìn cho rõ, dừng lại trước khi nhìn thấy hình màu trắng xuất hiện->giữ ALT kéo nút sẽ hiện ra các vùng ảnh hưởng mạnh và có thể lose chi tiết khi chỉnh tiếp
+->dùng vibrance/sat để chỉnh sao cho các chi tiết không bị mất khi chỉnh tươi lên or xỉn đi
+HueCheckLayer(đã biết->cứ làm như cũ)->để mạnh hơn muốn chỉnh 1 bức khá hoàn hảo r,tạo solidColor có sat=50,bright=100->blendMode:Saturation->tạo layerCurveCheck xRay->nhìn các vùng màu k đồng đều thì biến nó thành đồng đều->chữa bằng hue/Saturation AdjustmentLayer->Dùng handTool chọn vào chỗ đó và chuyển hue lên max, sat lên 1 chút->co hẹp lại và kéo thanh dưới và di để tìm vị trí bị sai màu->giảm hue,sat về 0, kéo dài thanh dưới và bắt đầu chỉnh cho vị trí đó có màu của vùng xung quanh
+
+trong HistoryTable->click biểu tượng 2->tạo snapShot là cái ảnh chuẩn hiện tại click chọn bất cứ lúc nào
+
+BlendModeOverlay: hòa trộn 2 layer bằng cách giảm bớt màu xám đi-> điều này làm cho màu trắng và đen đều bị giảm nhưng màu xám bị giảm hoàn toàn mạnh nhất
+
+SHIFT+Click layerMask để xóa tác dụng layermask
+CTRL+H->ẩn vùng chọn
+
+Giữ ALT+click vào layer->fit layer đó trên màn hình
+
+Cách ghép mặt người này vào người khác: chọn mặt->paste ảnh khác->MenuSelect->Modify->Contract 1 đoạn->Chọn layer gốc delete phần đó đi->chọn 2 layer->Menu Edit->Auto-blendLayer->Ok
+
+Chọn trong SelectAndMask nhìn cho dễ->Output->NewLayerAndSelectMask
+Làm chủ lensBlur của menu Filter:Thường dùng chỉnh mờ theo phối cảnh
+chọn đối tượng người rõ hoàn toàn-> chọn phối cảnh với layer mask trắng đến đen dần bằng brush+hardness=0+flow=10-> làm mờ bằng lensBlur: Faster->source:layermask nếu đã có layermask chuẩn r->invert vì chọn người chứ k chọn background->chỉnh blurFocalDistance là muốn mờ ở xa hay ở gần->chỉnh hình dạng ánh sáng Shape->Radius: mức độ phạm vi-> brigtness chỉnh độ sáng, threshold là mở rộng chọn vùng nào là vùng để brightness sáng đồng thời tạo hình dạng ánh đèn nếu kéo gần mốc bên phải-> kéo cả 2 thanh ra giữa thì mới nhìn thấy hiệu ứng, chỉ dùng khi nào có ảnh đèn đằng sau->chỉnh noise->Shift cái layer mask thì mới thấy hiệu ứng làm mờ
+lưu cái mask bất kỳ vào Channeltable-> CTRL+ClickMask->Copy->sang channel->chọn RGB->CLick biểu tượng mask->bỏ chọn alpha
+khi tạo layermask với 1 ảnh sẽ tự động có nó trong channel table.
+
+HistoryBrushTool->Tô quá khứ
+
+
+
+
+
+
+
+
+
+

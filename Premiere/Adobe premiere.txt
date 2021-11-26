@@ -1,0 +1,90 @@
+﻿Kiến thức Priemre:
+File->New->Project=>CTRL+ALT+N
+
+File->import=>Ctrl+I/projectTable->doubleLeftClick or RightClick->Import(img/vid)
+
+Window->WorkSpace->reset*
+
+ChooseVidOnProjectTable->File->New->Sequence=>Ctrl+N->HDV->1080p30->ok
+(nếu chất lượng khác nhau nhiều đoạn=> nên ép cho cùng 1 sequence)
+
+DoubleClickImgProject->SourceTable->ClickHoldAndMove->TimelineTable  /  kéo từ source vào projecttable biểu tượng 2 từ phải qua để tạo sequence
+TimelineTable->chỉnh kích thước, chọn vid, audio nào đưa chuột về cuối or về đầu xuất hiện ngoặc vuông=>clickHoldAndMoveToCut 
+RightClickOnVid/au/img->clear
+
+Source/ProgramSequence-> markIn(mặc định nó ở đầu or cuối vid) {=>I  markOut }=>O RightClick->clearIn gotoIn=>Shift+I  gotoOut=>Shift+O  ExportFrame=>Ctrl+Shift+E   dấu +  chọn vị trí trên timeline=>Insert=>,/overwrite->.  =>Space để pause/continue nhanh
+
+ProgramSequence->Chỉnh kích thước  chất lượng  ->kéo rê kích thước,di chuyển vị trí
+
+Tool thao tác timeline:
+RazorTool=>C=>click chia video con
+SelectionTool=>V chọnVid=>moveVidPosition  rightclickVid/khoảng trống=>RippleDelete
+Di chuyển video nào hiển thị trc,kéo vô hạn vid trùng vào ok
+chọn nhiều video liền nhau->rightclick->nest
+
+RightClickVidOnTimelineTable->EffectControlsTable->ResetButton
+Motion->Position->chỉnh trục x,y  Scale(cả ảnh và vid)
+Rotation
+Opacity->chỉnh opac  blendMode  công cụ vùng chọn elip,rec,pentool
+
+//!
+giữ chuột trái vào âm thanh và kéo lên/xuống sao cho âm thanh tầm 6-12db(nên chỉnh đầu tiên) => chỉnh ở audio effects
+EffectsTable->AudioTransition->Crossfade->kéo hiệu ứng vào->doubleClick/kéo ở mép để chỉnh thời gian
+Muốn có giữa video thì cắt+hiệu ứng
+AudioEffect->AudioEffect->ObsoleteAudioEffects->AdaptiveNosieReduction-> kéo vào audio-> chỉnh thêm trên effectControlTable
+bypass là trước và sau khi chỉnh
+TimelineTable->ấn vào M->muteTrack(ấn mắt)  ấn vào mic->ghi âm ra projectTable
+
+Kỹ thuật hiệu ứng chuyển cảnh:EffectTable=>Shift+7  tìm kiếm  VideoTransition->kéo thả vào timeline(có vid chia từ trc)->rightClick->Clear  di chuyển hiệu ứng sang vid nào nh hơn  đưa chuột cuối/đầu->kéo dài hiệu ứng  thay thế hiệu ứng kéo thả vào sẽ k đổi vị trí đã chỉnh
+(Chỉnh trên effectControlTable cx đc)
+Kỹ thuật tách phông cb:
+EffectTable->vidEffect->Keying->untraKey->EffectControlsTable có ultrakey->keycolor chọn màu bằng bút*->output cách hiển thị->matteGeneration->highlight shadow tolerance chọn vùng*->matteCleanup->choke loại viền  
+(Ta tạo ra 1 sequence thì các vid nếu k cùng định dạng chất lượng sẽ tự bị phóng to, thu nhỏ để ép về cùng chất lượng-> ta có thể scale lại để k mất chi tiết)
+
+Adjust->Level->kéo vào vidOnTimeline->EffectControlsTable->click biểu tượng bảng bên phải->chỉnh*
+ImageControl->ColorBalance/BlackAndWhite*
+ImageControl->ColorReplace->chỉnh mức độ dải màu  replaceColor  
+Obsolete->RGB Curves/ShadowHighlight*
+Tương tự các hiệu ứng khác như blur
+
+ChooseVid/AudOnTimeline=>Clip->Speed/Duration=>Ctrl+R  RightClick->Speed/Duration->chỉnh speed  khoá K  reverseSpeed
+(Nhanh,chậm,đảo ngược)
+Chọn tất cả(chọn vid sẽ tự chọn au)->Rightclick->unlink(au k còn đi liền với vid nx)->chọn ổ khoá của au->mọi tùy chỉnh k ảnh hưởng đến au nx
+
+TimelineTable->ClickTypeTool->T gõ text  V kéo dài chữ  EssentialGraphicTable->chỉnh vị trí opac,bôi đen r đổi font,size*  Apperance->fill,stroke,background và tùy chỉnh  moveTool di chuyển chữ
+Kỹ thuật hiệu ứng cơ bản:ChooseTextOnTimeline->đánh chữ->chọn chữ on TimelineTable-> EffectControlsTable-> toggleAnimation-> kéo thanh đến vị trí trên vid-> chỉnh effect r cứ kéo thanh r chỉnh tt
+
+doubleClickEverythingOnTimeline->chỉnh trên source
+
+File->Export->Media->Ctrl+M->chỉnh format(H264),preset(youtube720p)  matchSequenceSetting tự động=>nên chỉnh preset sao cho đúng với định dạng source sequence  chỉnh video/auTable  
+
+rightCLickVidOnTimelineTable->RemoveAttribute(bỏ kc)
+
+chỉnh keyframe trc khi cắt vid
+
+xoá bỏ một vật thể cơ bản: nhân bản vid+chọn v mấy trong timeline+chọn vùng khác, đắp vào+ keyframe+chỉnh feather và màu cho nó hòa trộn. Khi vật thể di động dùng keyframe cho cđ theo+dịch vid ta đè.
+
+giữ ALT+di layer để copy đến vị trí nào(k giữ CTRL)
+
+LumetricColor:BasicCorrection->whileBalance:cân bằng trắng  /  Tone:best sáng tối  /  saturation  /  inputLUT
+              Creative:chỉnh những phong cách màu có sẵn  chỉnh sắc nét/mờ,sat,màu vùng shadow,hightlight
+              Curve->RGB Curves->sáng tối,màu  SatCurve->chỉnh 3 cái đầu:tươi,đổi màu,sáng tối là ok
+              ColorWheel->chỉnh màu và sáng tối 3 vùng
+              Vignette:chỉnh hiệu ứng mờ ở góc focus vào tâm
+(basicCorrection:sáng tối  colorWheel:shadow,hightlight  vignette:hiệu ứng  Curve:đổi màu  Creative:sắc nét,hiệu ứng có sẵn)
+
+(toolbox)
+(new title)
+
+
+
+
+
+
+
+
+ấn vào thanh menuBar để cản lag, import vào chờ tí đừng ấn ngay
+
+Video không đúng sequence hay bị lag
+Lỗi adobe premiere: file mp4 nặng quá, phải convert sang m4v mới đc. Dùng HandBrake chuyển đổi mà vẫn giữ dung lượng
+

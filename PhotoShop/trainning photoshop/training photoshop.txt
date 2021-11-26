@@ -1,0 +1,64 @@
+Setting:
+Các thứ trong reference: zoom(tool), cursor,color setting,Interpolation(general),interface,history lưu(performance)
+lưu mở file
+tùy chỉnh k gian làm việc
+phím tắt CB và thiết lập
+hủy bỏ lệnh 
+
+Kiến thức lý thuyết chữ: 
+Mode màu,2 ko gian màu, bảng màu, khái niệm, đồ họa raster,bitdepth,posterize,thế nào là 1 bức ảnh chất lượng tốt
+
+Các điều chỉnh liên quan kích thước:
+imagesize+cắt xén+làm thẳng+mở rộng vùng làm việc
+
+Ảnh Raw:
+cameraRaw,hiệu ứng transparency,opacity
+
+Layer:
+tạo,quản lí làm viẹc,các phím tắt,nhóm,layerClippingMask,copy,layerSmartObject
+
+Các công cụ chọn:
+tool,colorRange,quickMaskMode,refineEdge,focus,biến tập bằng menuSelect,chọn bằng pentool,lưu vùng chọn
+
+layermask,layerMaskPanel
+Kỹ thuật ghép ảnh phong cảnh(thêm về match color)
+
+Image->Adjustment/Blending Mode
+Kỹ thuật chỉnh màu cơ bản của level/Blending màu bằng level
+Kỹ thuật dùng blend mode loại bỏ background tương phản
+Kỹ thuật chỉnh sắc độ điểm tối,sáng nhất
+Kỹ thuật tạo ảnh 2 màu với gradientMap
+
+khử noise
+
+Brush:
+Công cụ,bảng brush
+Kỹ thuật vẽ tranh với mix brush tool
+
+retouch:
+fillcontentaware,clonestamp,healingBrush,spotHealingBrush,patch tool,dodge,burn
+Kỹ thuật retouch ảnh chân dung:chỉnh mắt,da,loại mụn,nhuộm tóc,chỉnh cấu trúc cơ thể với liquify,kỹ thuật kéo dài bộ phận,chỉnh độ méo cấu trúc (puppetwrap)
+
+Lỗi tỉ lệ, méo ảnh:
+contentawarescale,correactionFilter,phối cảnh vanishing point
+
+chỉnh nét:
+sharpen,highPass
+smudge,blur,sharpen
+
+văn bản và đoạn:
+text,paragraph table
+
+Pentool và các nhóm hình cơ bản
+
+tạo ảnh động
+
+tối ưu hóa ảnh lên web
+
+LayerStyle
+
+
+channel mix table,tải nét bút trên mang vê,tự tạo nét but
+
+
+
