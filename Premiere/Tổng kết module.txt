@@ -1,4 +1,7 @@
-﻿Kiến thức Priemre:
+﻿Priemere:
+
+
+# Basic
 File->New->Project=>CTRL+ALT+N
 
 File->import=>Ctrl+I/projectTable->doubleLeftClick or RightClick->Import(img/vid)
@@ -16,7 +19,7 @@ Source/ProgramSequence-> markIn(mặc định nó ở đầu or cuối vid) {=>I
 
 ProgramSequence->Chỉnh kích thước  chất lượng  ->kéo rê kích thước,di chuyển vị trí
 
-Tool thao tác timeline:
+-> Tool thao tác timeline:
 RazorTool=>C=>click chia video con
 SelectionTool=>V chọnVid=>moveVidPosition  rightclickVid/khoảng trống=>RippleDelete
 Di chuyển video nào hiển thị trc,kéo vô hạn vid trùng vào ok
@@ -27,13 +30,14 @@ Motion->Position->chỉnh trục x,y  Scale(cả ảnh và vid)
 Rotation
 Opacity->chỉnh opac  blendMode  công cụ vùng chọn elip,rec,pentool
 
-//!
-giữ chuột trái vào âm thanh và kéo lên/xuống sao cho âm thanh tầm 6-12db(nên chỉnh đầu tiên) => chỉnh ở audio effects
+TimelineTable->ấn vào M->muteTrack(ấn mắt)  ấn vào mic->ghi âm ra projectTable
+
+-> Effect
+Giữ chuột trái vào âm thanh và kéo lên/xuống sao cho âm thanh tầm 6-12db(nên chỉnh đầu tiên) => chỉnh ở audio effects
 EffectsTable->AudioTransition->Crossfade->kéo hiệu ứng vào->doubleClick/kéo ở mép để chỉnh thời gian
 Muốn có giữa video thì cắt+hiệu ứng
 AudioEffect->AudioEffect->ObsoleteAudioEffects->AdaptiveNosieReduction-> kéo vào audio-> chỉnh thêm trên effectControlTable
 bypass là trước và sau khi chỉnh
-TimelineTable->ấn vào M->muteTrack(ấn mắt)  ấn vào mic->ghi âm ra projectTable
 
 Kỹ thuật hiệu ứng chuyển cảnh:EffectTable=>Shift+7  tìm kiếm  VideoTransition->kéo thả vào timeline(có vid chia từ trc)->rightClick->Clear  di chuyển hiệu ứng sang vid nào nh hơn  đưa chuột cuối/đầu->kéo dài hiệu ứng  thay thế hiệu ứng kéo thả vào sẽ k đổi vị trí đã chỉnh
 (Chỉnh trên effectControlTable cx đc)
@@ -41,7 +45,7 @@ Kỹ thuật tách phông cb:
 EffectTable->vidEffect->Keying->untraKey->EffectControlsTable có ultrakey->keycolor chọn màu bằng bút*->output cách hiển thị->matteGeneration->highlight shadow tolerance chọn vùng*->matteCleanup->choke loại viền  
 (Ta tạo ra 1 sequence thì các vid nếu k cùng định dạng chất lượng sẽ tự bị phóng to, thu nhỏ để ép về cùng chất lượng-> ta có thể scale lại để k mất chi tiết)
 
-Adjust->Level->kéo vào vidOnTimeline->EffectControlsTable->click biểu tượng bảng bên phải->chỉnh*
+-> Adjust->Level->kéo vào vidOnTimeline->EffectControlsTable->click biểu tượng bảng bên phải->chỉnh*
 ImageControl->ColorBalance/BlackAndWhite*
 ImageControl->ColorReplace->chỉnh mức độ dải màu  replaceColor  
 Obsolete->RGB Curves/ShadowHighlight*
@@ -73,17 +77,11 @@ LumetricColor:BasicCorrection->whileBalance:cân bằng trắng  /  Tone:best s�
               Vignette:chỉnh hiệu ứng mờ ở góc focus vào tâm
 (basicCorrection:sáng tối  colorWheel:shadow,hightlight  vignette:hiệu ứng  Curve:đổi màu  Creative:sắc nét,hiệu ứng có sẵn)
 
-(toolbox)
-(new title)
 
 
-
-
-
-
-
-
-ấn vào thanh menuBar để cản lag, import vào chờ tí đừng ấn ngay
+# Other:
+-> Fix lag máy cấu hình yếu:
+Ấn vào thanh menuBar để cản lag, import vào chờ tí đừng ấn ngay
 
 Video không đúng sequence hay bị lag
 Lỗi adobe premiere: file mp4 nặng quá, phải convert sang m4v mới đc. Dùng HandBrake chuyển đổi mà vẫn giữ dung lượng

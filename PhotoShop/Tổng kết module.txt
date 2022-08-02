@@ -1,4 +1,20 @@
-﻿
+﻿Photoshop:
+
+
+# Basic:
+CameraRaw: chỉ click+alt ctrl0 để zoom AdjustmentTool+Giữ chuột WhiteBlance:fill màu ngc lại màu đó=> tìm màu trung tính trông bức ảnh rất thực.Adjustmentool=>nhan giữ RIGHTMOUSE+chỉnh TT lên ảnh. Thg dùng 2 cái saturation và parametric curve làm đổi độ đậm và độ sáng ở 1 vùng. xóa bẩn vs spot remove, gradient tạo vùng chuyển sáng tối, brush vs chỉnh sáng tối 1 vị trí. radial filter khoanh vùng r chỉnh bên ngoài, clear all. +TransformTool +AdjustmentBursh+giữ chuột phải điều chỉnh phạm vi, click chuột trái chỉnh vị tri
+Highlight làm giảm độ chói khi quá sáng, vibrant làm tăng độ tươi,sharpening làm nét
+
+Để đăng đc ảnh lên website, cần đảm bảo yếu tốt nhẹ và giữ nguyên đc màu sắc
+File->Export->SaveForWeb->CTRL+ALT+SHIFT+S->Chọn định dạng,preset+convertTosRGB+chỉnh quality/lưu high r cho vô tinypng.com
+Lưu jpg chất lg tốt hơn png, nhưng png 24 chất lượng tốt hơn jpg, tuy nhiên png24 rất nặng, chỉ nên để JPG high.Chỉ lưu png vs ảnh có transparency, tùy nặng nhẹ mà 8 hay 24. Ảnh gif thì chất lượng thấp chỉ lưu ảnh động
+
+view snap làm vùng chọn từ áp vào các edge khi chọn auto bật r
+
+Cách trích 1 layer thành ảnh-> cho thành smartobject r lưu là nhanh nhất, cx dùng đc vs cả 1 thư mục các layer=> thư mục layer cx chuyển sang smart object đc
+
+PencilTool=>B dùng tô thô ráp, các điều chỉnh của brush k có tác dụng  EraseTool->E +ChoseLayer+DrawOnlayer(xóa ht khỏi layer)/Tạo cùng chọn+DELETEBUTTON
+
 Image+Adjustment+Desatorate(CTRL+SHIFT+U)+HistoryBrush=>CTRL+U Y
 
 crop tool với kích thước chỉ định in ấn
@@ -288,8 +304,6 @@ or RIGHTLICK+BlendingOPtion->blendingOption->AvancedBlending->FillOpacity(chỉn
                                    -> ColorOverlay(chọn màu r chỉnh opac thôi, hòa trộn cx chỉ là đậm nhạt=>luôn Normal)
                                    -> PatternOverlay-> BlendMode(Nó như kiểu phủ layer partten lên trên và ta chỉnh blend cho layer đó),opacity,pattern,scale
                                    -> DropShadow (cho thêm bóng shadow)-> Structure-> BlendMode(điều khiển shadow trộn với layer dưới nó),opacity,angle,distance,spread(khiến cho các đường nét phồng ra của shadow, VD chữ thì bị béo ra),size  Quality->Contour,Noise
-
-
 
 EDIT+KeyboardShortCut=>CTRL+ALT+SHIFT+K
 

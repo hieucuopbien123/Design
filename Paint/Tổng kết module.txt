@@ -1,3 +1,7 @@
+Paint:
+
+
+# Basic
 Mở paint: WINDOW + R + gõ mspaint / CMD + mspaint.exe 
 
 CTRL + O

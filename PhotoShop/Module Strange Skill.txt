@@ -1,4 +1,5 @@
-﻿Cách chỉnh độ bóng sáng(cho mắt):
+﻿# Strange Skill:
+-> Cách chỉnh độ bóng sáng(cho mắt):
 NewLayer+BrushTool(loại bút sắc nét+chỉnh nét nhất)->ChooseWhiteColor->DrawACircleOnTheEye->EraseTool(chọn kích thước to hơn con ngươi 1 chút+full hardness)->DrawEraseOnPupil->chọn tẩy có hardness nhỏ rồi xóa phần thừa->Filter+Blur+GaussianBlur cho cái layer đó ->BlendingModeLayer+Overlay->chỉnh độ ảnh hưởng bằng OpacityLayer->chỉnh vị trí bằng LayerMask+BrushTool(màu đen)+OpacityBrush
 (Vđ là chế độ hòa trôn overlay nó xóa màu xám và đồng thời làm cho màu sắc trở nên sáng nổi hơn k như softlight chỉ loại bỏ màu(nó làm sáng tối hơn 1 chút và tối sáng hơn)-> rất thích hợp chỉnh độ sáng trong dễ nhìn cho màu mắt)
 (nếu dùng dodgeTool cho nó thì nó như phủ lên 1 lớp sáng hơn còn hòa trộn overlay nó tạo màu sáng trong còn đẹp hơn thế, cảm giác như bản thân màu đó đổi luôn chứ kp phủ lên 1 lớp)
@@ -21,17 +22,17 @@ NewLayer+BrushTool(loại bút sắc nét+chỉnh nét nhất)->ChooseWhiteColor
 (lấy màu nhanh =>giữ alt)
 (chỉnh 1 mắt xog áp dụng cho các mắt khác đc)
 
-Cách chế tạo logo cơ bản:(giả sử logo thông thường có 2 phần là chữ và hình)
+-> Cách chế tạo logo cơ bản:(giả sử logo thông thường có 2 phần là chữ và hình)
 Tạo CTRL+N 1 khổ giấy mong muôn->Ta tạo ra chữ logo nghệ thuật với màu và kích thước tùy ý với CTRL+T,chèn ký tự bằng glythTable=> dùng công cụ vẽ vector để vẽ hình và tô màu->chỉnh sửa chữ và hình bằng layerStyle or brush tool or phối hợp tùy ý(layerClippingmask cx nhét background đằng sau vào chữ đc)->xog xuôi ta chuyển ảnh to thành smartobject r resize tùy ý
 EraserTool=>E(xóa thành transparancy)-> magicEraserTool-> xóa bộ phận cùng màu bị giới hạn bởi edge (còn 1 cách nx là chọn r delete nhưng xấu hoắc)
 Khi dùng đồ họa vector để vẽ, nó sẽ tự tạo ra 1 layer mới và auto là SmartObject.Ta cứ thao tác bth nhưng r cuối cx phải rasterize khi cắt or chỉnh.Khi vẽ nhiều hình khối bằng vector, ta có thể chỉnh vị trí chuẩn bằng công cụ moveTool có các tùy chỉnh vị trí layer. 
 Có snap và smartguide, chuyển về moveTool+ấn Ctrl+ di chuột vô sẽ thấy vị trí 1 khoảng cách
 
-Sự khác nhau giữa Fill và opacity ỨD tạo phong cách chữ nối trên bề mặt chất liệu:
+-> Sự khác nhau giữa Fill và opacity ỨD tạo phong cách chữ nối trên bề mặt chất liệu:
 Fill giống opacity chỉ là nó k ảnh hưởng đến layeraStyle
 Tạo hiệu ứng chữ với fill: Dùng Shadow/BevelAndEmboss cho chữ của ta->giảm fill về 0 tạo hiệu ứng
 
-Chế độ hoà trộn được dùng rất mạnh mẽ với các chức năng khác nhau:
+-> Chế độ hoà trộn được dùng rất mạnh mẽ với các chức năng khác nhau:
 ỨD: chỉnh sắc nét bức ảnh
 Dùng highpass->hoà trộn hardLight(sắc nét về đường nét)
 Dùng ảnh copy đen trắng,chỉnh level=>hoà trộn overlay(sắc nét màu,độ sáng)
@@ -40,7 +41,7 @@ Kết hợp unsharpmask nếu ảnh cũ or smart unsharp nếu biết kiểu nho
 Tất cả gom thêm chỉnh fill 
 (Thông thường kĩ thuật chỉnh cơ bản luôn là chỉnh màu và ánh sáng, kể cả khi ghép ảnh, làm sắc nét ảnh,… đều phải có đủ cả 2, chuyên nghiệp thì chỉnh shadow/hl)
 
-Kỹ thuật ghép một ảnh nhỏ chi tiết vào ảnh lớn(đầy đủ các bước):
+-> Kỹ thuật ghép một ảnh nhỏ chi tiết vào ảnh lớn(đầy đủ các bước):
 Cắt hoặc dùng vùng chọn+layermask ảnh nhỏ->tìm hướng sáng r chỉnh cùng hướng sáng với Ctrl+T+RightClick+Flip
 CTRL+T chỉnh ảnh nhỏ vào đúng vị trí=>ColorBalance chỉnh màu+brightness/contrast chỉnh ánh sáng+layerclipingmask->bh ms refineEdge mới hợp lý
 (mọi thao tác chỉ với ảnh nhỏ đều clipping mask lại)
@@ -59,6 +60,7 @@ Chỉnh các thanh trượt ở trang đầu phù hợp tương phản màu sắ
 Kỹ thuật xoá ảnh nhuốm tông giúp màu sắc cân bằng:
 Dùng sau clarify sẽ giúp ảnh trông thực mà đỡ bị nhuốm tông->newlayer->chọn màu đáng lẽ ra là màu trắng trong bức ảnh(nhưng bị nhuốm lông khiến nó hết trắng)->solidcolor->blendMode:Divide->doubleClickOnSolidColorLayer->tick vào chữ B(Brightness)->kéo thanh trượt lên nếu màu bị chói quá
 
+-> Other:
 SolidColor khác layer màu bth ở chỗ, solidColor sẽ chỉnh màu nhìn thấy ngay
 
 Chế độ hoà trộn devide sẽ tạo ra màu =256÷(màu trên÷ màu dưới)=>cơ chế:ví dụ bức ảnh bị nhuốm tông khiến vùng màu đáng lẽ trắng thì lại k có màu trắng->ta chọn màu đó và dùng với solidColor+divide thì sẽ tạo ra 256÷(1÷1)=màu trắng, các vùng tối gặp màu trắng cx sẽ sáng lên=> tuy nhiên nếu như màu trắng chói quá làm mất các chi tiet thì chỉnh tiếp brightness như trên
@@ -170,13 +172,4 @@ lưu cái mask bất kỳ vào Channeltable-> CTRL+ClickMask->Copy->sang channel
 khi tạo layermask với 1 ảnh sẽ tự động có nó trong channel table.
 
 HistoryBrushTool->Tô quá khứ
-
-
-
-
-
-
-
-
-
 

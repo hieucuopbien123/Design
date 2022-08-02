@@ -1,0 +1,104 @@
+Figma:
+
+
+# Phím tắt:
+Ctrl \ -> ẩn 2 thanh
+SHIFT + 2 => zoom vào đối tượng
+SHIFT 1 -> toàn màn hình
+CTRL + click chuột là sẽ chọn được hình ngay dưới chuột
+CTRL + D để duplicate các item đang chọn
+Shift chọn nhiều cái -> CTRL + G để gom thành 1 group
+
+CTRL+SHIFT+? để mở thanh help phím tắt
+
+ALT giữ chuột duplicate
+Giữ ALT SHIFT kéo chuột để duplicate trên 1 đương thẳng
+ALT click chuột r vẫn giữ ALT hover chuột ra ngoài để xem kích thước
+
+Double click liên tục vào phần cần lấy để tách nó ra xem trong từng group, nhưng gom hẳn thành 1 object mới thì k được
+
+CTRL+SHIFT+K để lấy hàng loạt hình trong máy paste vào figma
+Chọn hàng loạt + ctrl R -> rename hàng loạt
+
+Phím K để scale tool di chuyển giữ tỉ lệ
+
+Giữ space + di chuyển item thì item sẽ luôn kẹt trong container hiện tại của nó kể cả di chuyển ra ngoài
+
+Ctrl P -> search tính năng nhanh
+I -> lấy color picker
+SHIFT R -> ruler
+Ctrl C, Ctrl V bình thường
+
+
+
+# Basic:
+Giống photoshop vl
+
+Frame rồi chọn kích thước or tự vẽ
+
+1rem = 16px
+type-scale.com => trang web chuẩn phông chữ để biêt kích thước các thứ nên là gì, scale thể hiện sự chênh lệch giữa 1 phông to với 1 phông nhỏ hơn
+
+Có thể create style để tái sử dụng loại chữ cho nhiều text khác nhau
+Chọn text và create style. Đặt tên style theo cú pháp: <A>/<B>
+
+Có thể sửa ảnh thành các chế độ khác nhau như fill, crop,..
+
+-> Link help: https://help.figma.com/hc/en-us/categories/360002042553-Figma-design#Get-started
+
+Save to version history và show version history
+
+Có thể share cho người khác, save to local, import vào file.fig, export to pdf
+Có thể chọn từng group và export thành định dạng nào với tỉ lệ bất kỳ
+
+icon trong figma có plugin sẵn -> right click -> plugins -> chọn toàn bộ icon, shift 2 -> giữ shift kéo các đường nét ngắn lại
+Có plugin cho ảnh nữa, plugin sinh ảnh avatar riêng
+
+Figma k cho xem phông chữ trực tiếp khi hover nhưng nó hỗ trợ tất cả font của google nên vào fonts.google.com để xem font live phù hợp và lấy tên -> chỉnh bằng dropdown category. VD font serif là có chân, san serif k có chân, chọn ngôn ngữ để lấy các ngôn ngữ hỗ trợ tiếng việt chẳng hạn
+
+Mời người vào làm chung-> để comment-> resolve comment
+
+Nếu k có icon có thể tự vẽ lại mnl.
+
+Giữ shift chỉnh các node biến hình tròn thành đủ thứ
+double click vào hình, chọn nút và delete được node luôn tạo hình chữ C
+Chỉnh xong path nhớ done
+Right click -> flip các hướng
+Ta dùng stroke để vẽ icon vì nhỏ, nhưng biến nó thành hình bằng cách click vào -> outline stroke
+
+-> Trong figma có component, tạo 1 component và tạo ra nhiều instance, sửa component các instance đều đổi. Có thể đổi component theo 1 instance sau khi sửa instance đó or tách instance đó độc lập khỏi component gốc
+ta tạo ra nhiều component khác nhau của cùng 1 object nhưng  khác vài thuộc tính -> biến nó thành nhiều component -> chọn tất cả -> combine as component -> chuyển sang tab prototype -> nối mũi tên từ gốc tới từng trạng thái và edit các thuộc tính như while hovering. Tương tự VD tạo check list
+các instance đổi theo component gốc nhưng khi custom nó thì thuộc tính nào được custom sẽ tách khỏi component gốc
+
+-> Tạo flexible với constraints và auto layout:
+1) Constraint: constraints theo component ngoài
+constraints theo cột or hàng VD 3 buttons. Ta tạo ra 1 rectangle bao 3 button và tạo grid 3 cột cho nó. Tức cái layout là rectangle chia làm 3 cột, nhét button vào giữa từng cột và cho constraints căn giữa từng cột-> cho cả rectangle căn theo bottom và left và right là ok. Chứ gom 3 button 1 group và cho constrains group đó thì k ổn mà phải dùng như này
+constraint cả 4 thuộc tính cx đc
+2) Auto layout: Gom 1 group -> auto layout với SHIFT A -> chỉnh space giữa các item là auto
+
+Button dài ra theo chữ -> tạo chữ xong dùng autolayout -> fix cái button vào giữa layout(thuộc tính auto layout của layout) -> fill cái layout với màu gì là được
+
+Cứ dùng autolayout chồng lên autolayout để căn vị trí, nó như 1 frame trong suốt bao ngoài mặc định
+
+-> Chuyển tab prototype -> chọn button -> link tới trang tương ứng -> chỉnh custom sự kiện và hiệu ứng chuyển trang -> ít dùng
+Prototype scrolling: mở tab prototype -> Group lại với ctrl G -> rightclick frameselection -> chọn loại scrolling trong tab prototype -> di chuyển nút play flow sang trang muốn dùng là xong -> chọn frame và design clip content để tràn ngoài frame bị cắt
+
+Chọn prototype -> interaction -> chọn delay và set up thời gian và nối trang đó với trang khác thì khi preview sẽ chuyển từ từ từ trang đó tới trang khác
+Chọn kiểu xuât hiện là open overlay thì có thể chỉnh nhiều thứ khác như từ phía nào, ấn ra ngoài có mất k
+
+-> Pentool tạo stroke bằng cách giữ shift và vẽ bình thường
+Click lại nốt cũ thì đường sau sẽ thẳng, esc để dừng cái path hiện tại tạo 1 path mới, enter để done, bấm lại enter để sửa tiếp
+
+ALT vẽ từ tâm
+
+
+
+# Các thứ bỏ qua:
+Smart animate: Vd tạo ấn xóa là item bị xóa được
+Slider, scroll bằng interactive component
+Animation: tạo hiệu ứng vô tận chạy liên tục
+Input Field Interaction: nhập chữ vào field
+Interactive component đủ mạnh tạo hẳn bàn cờ caro
+Responsive catalog
+Tương tác figma mirror chạy live trên điện thoại
+
