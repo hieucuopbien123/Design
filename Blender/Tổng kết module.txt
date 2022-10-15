@@ -1,0 +1,52 @@
+Blender:
+
+
+# Basic
+A -> chọn tất cả mọi thứ, ALT + A là bỏ chọn mọi thứ
+N, T -> thanh công cụ
+
+-> (SHIFT) + Con lăn chuột -> di chuyển trong kg 3d
+
+-> Các phím bấm trên màn hình giúp di chuyển và thao tác mọi thứ với object được chọn
+G -> move  /  G + X/Y/Z move theo từng trục
+R -> rotate  /  RX RY RZ
+S -> scale  /  SX SY SZ
+
+-> Có tab chọn mode
+Tab -> bật edit mode, có thể thêm xóa cube các thứ
+Ctrl + tab 
+Khi ở edit mode thì chọn 1 mặt thì mặt sau sẽ k được chọn, khác với object mode là chọn luôn cả object => chuyển wireframe là chọn được tất cả, X ray view tương tự nhưng chỉnh dropdown thêm opacity
+=> Bên cạnh tab có các option chọn đỉnh, cạnh, mặt => phím CTRL + 1/2/3 => dùng các tool move rotate scale như object mode cho từng phần tử được
+
+-> Z -> chuyển mode hiển thị
+Material view chỉnh màu các thứ => các dòng máy yếu k mở được chế độ này gây lỗi
+
+--> Dùng các tool khác đi kèm của edit mode cho từng phần tử chọn
+---> Mặt:
+Extrude: or ấn E khi ở select box ban đầu
+Inset: or I
+--> Cạnh
+Bevel: chỉnh các thứ ở nút bevel nhỏ bên trái dưới
+Loop cut: chọn vào edge dọc or ngang và ấn giữ chỉnh vị trí r nhả ra
+
+-> SHIFT CLICK chọn nh object -> phải chuyển sang object mode qua shift tab mới chọn được object và con chuột phải ở mode select box là hình đầu tiên
+
+-> Add object
+Nút add / SHIFT A
+
+-> Đặt cursor -> object được add sẽ hiện ở vị trí cursor
+SHIFT + S => thao tác các thứ với cursor
+
+-> Duplicate: chọn -> SHIFT D -> left click
+
+-> Có thể import nhiều file 3d object vào blender, xuất file ra 
+
+-> Tạo animation:
+--> Basic: Chọn object -> I -> Location, Rotation and Scale đặt keyframe -> tương tự làm nhiều vị trí, mỗi lần đều phải đặt 1 keyframe mới -> co nhỏ end của timeline trong phạm vi frame ta dùng -> export và dùng trong dự án
+
+--> Object Amateur giúp tạo animation như xương di chuyển trông thật hơn với các object chuyển động phức tạp. Phải dùng object Amateur làm bone cho vật thể, gắn các khúc xương với nhau tùy kích cỡ xương lớn hay nhỏ, gắn xương với vật thể. Đặt animation cho xương ở trong tab animation và vật thể cho ra các chuyển động phức tạp. 
+Tùy vào animation như nào mà số lượng xương cũng như độ chi tiết càng lớn 
+Tab animation trong Blender giúp quản lý khi có nhiều loại animation khác nhau: chuyển drop sheet sang action editor và tạo từng animation riêng
+=> Phức tạp chưa làm
+
+
