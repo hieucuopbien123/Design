@@ -86,3 +86,5 @@ LumetricColor:BasicCorrection->whileBalance:cân bằng trắng  /  Tone:best s�
 Video không đúng sequence hay bị lag
 Lỗi adobe premiere: file mp4 nặng quá, phải convert sang m4v mới đc. Dùng HandBrake chuyển đổi mà vẫn giữ dung lượng
 
+-> Capcut: phần mềm chỉnh sửa video không chuyên tốt nhất. Chỉ đứng sau các tool chuyên nghiệp như premiere và after effect.
+
